@@ -15,9 +15,9 @@ melody_a = \relative c'' {
 harmonies_a = \chordmode {
   d2:m g4.:m |
   d2..:m |
-  a2:m d4.:m |
-  a2:m d4.:m |
-  a2:m d4.:m |
+  a2 d4.:m |
+  a2 d4.:m |
+  a2 d4.:m |
 }
 
 melody_b = \relative c' {
@@ -33,10 +33,10 @@ melody_b = \relative c' {
 }
 harmonies_b = \chordmode {
   d2..:m |
-  s2.. |
-  s2.. |
-  s2.. |
-  s2.. |
+  a2.. |
+  d2..:m |
+  a2 d4.:m |
+  a2 d4.:m |
 }
 
 melody_c = \relative c'' {
@@ -54,8 +54,8 @@ harmonies_c = \chordmode {
   g2..:m |
   d2..:m |
   d2..:m |
-  a2:m d4.:m |
-  a2:m d4.:m |
+  a2 d4.:m |
+  a2 d4.:m |
 }
 
 melody_d = \relative c' {
@@ -101,7 +101,7 @@ melody_f = \relative c'' {
   }
 }
 harmonies_f = \chordmode {
-  c2:m d8 d4 |
+  c2:m c8:m c4:m |
   d2 d8 d4 |
   d2.. |
   s4 c4:m d4. |
