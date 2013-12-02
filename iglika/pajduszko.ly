@@ -218,6 +218,7 @@ melody = {
 harmonies = {
   \germanChords
   \set chordNameLowercaseMinor = ##t
+  \set chordChanges = ##t
 
   \harmonies_i
   \harmonies_ii
