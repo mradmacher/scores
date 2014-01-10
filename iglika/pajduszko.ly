@@ -16,7 +16,7 @@ harmonies_i = \chordmode {
   e4:m d4. |
   g4 s4. |
   a4:m s4. |
-  a4:m s4. | %???
+  a4:m e4.:m | %???
 
   e4:m d4. |
   g4 s4. |
@@ -86,12 +86,12 @@ melody_iv = \relative c'' {
 }
 harmonies_iv = \chordmode {
   a4:m s4. |
-  e4:m s4. |
+  a4:m s4. |
   e4:m s4. |
   e4:m s4. |
 
   a4:m s4. |
-  e4:m s4. |
+  a4:m s4. |
   e4:m s4. |
   e4:m s4. |
 }
