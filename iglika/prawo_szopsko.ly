@@ -74,16 +74,70 @@ melody = \relative c'' {
   }
 }
 
-harmonies = {
+harmonies = \chords {
   \germanChords
   \set chordNameLowercaseMinor = ##t
   \set chordChanges = ##t
+
+  cis4 fis4:m |
+  fis2:m |
+  fis2:m |
+  h2:m |
+  h2:m |
+  h2:m |
+  cis2 |
+  cis2 |
+
+  h2:m
+  h2:m
+  h2:m
+  h2:m
+  h2:m
+  h2:m
+  cis2 |
+  cis2 |
+
+  h2:m |
+  cis2 |
+  h2:m |
+  cis2 |
+  h2:m |
+  cis2 |
+  h2:m |
+  cis2 |
+
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+  h2 |
+
+  h2:m |
+  cis2 |
+  h2:m |
+  cis2 |
+  h2:m |
+  cis2 |
+  h2:m |
+  cis2 |
 }
 
 \header { title = "Право шопско" }
 \score {
   <<
     \new Staff \transpose fis e \melody
-    %\new ChordNames \transpose fis e \harmonies
+    \new ChordNames \transpose fis e \harmonies
   >>
 }
