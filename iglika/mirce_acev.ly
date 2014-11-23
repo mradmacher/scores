@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.16.2"
 \include "deutsch.ly"
 melody = \relative c''' {
   \time 2/4
@@ -10,7 +10,7 @@ melody = \relative c''' {
   \repeat volta 4 {
     \times 2/3 {
       b4 g8 f4 e8 |
-      e8 dis e g4 b8 |
+      e8 dis e g4 a8 |
       b4 g8 f4 e8 |
     }
   }
@@ -43,7 +43,7 @@ melody = \relative c''' {
   \repeat volta 4 {
     \times 2/3 {
       c'8 h c d c b |
-      a4 c8 a4 g8 |
+      a4 b8 a4 g8 |
       g4 a8 f4 e8 | }
   }
   \alternative {{
@@ -196,10 +196,10 @@ harmonies = \chords {
   c2:m | d2 | c2:m | d2 |
 
   c2 | s2 | s2 | s2 |
-  c2 | s2 | s2 |
+  c2 | s2 | g2 |
   c2 | c2 |
 
-  c2 | s2 | s2 |
+  c2 | s2 | g2 |
   c2 | c2 |
 }
 
