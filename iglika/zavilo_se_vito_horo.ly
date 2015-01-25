@@ -4,10 +4,20 @@
 
 A = \relative c' {
   \repeat volta 2 {
-    e8 a a a | c4 h | g e |
-    e8 a a a | c4 h | a2 | a2 |
-    f8 f f g | a4 g | e c |
-    c8 d d e | c4 b | a2 | a2 |
+    e8 a a a | \noBreak
+    c4 h | \noBreak
+    g e | \noBreak
+    e8 a a a | \noBreak
+    c4 h | \noBreak
+    a2 | \noBreak
+    a2 | \noBreak
+    f8 f f g | \noBreak
+    a4 g | \noBreak
+    e c | \noBreak
+    c8 d d e | \noBreak
+    c4 b | \noBreak
+    a2 | \noBreak
+    a2 |
   }
 }
 
@@ -44,16 +54,16 @@ CChords = \chordmode {
   d2:m | e2:m | d2:m | e2:m |
 }
 
-D = \relative c' {
+D = \relative c'' {
   \repeat volta 2 {
     \acciaccatura e8 f4 \acciaccatura e8 f4 | \times 2/3 { g8 g f e e d } |
     e4 \times 2/3 { e8 e d } | \times 2/3 { d8 d c h h a } | d4 \times 2/3 { e8 e d } |
     \times 2/3 { c8 c b b b a } |
   }
   \alternative { {
-    a4 \times 2/3 { a4 g8 } | \times 2/3 { a4 h8 c4 d8 } |
+    a4~ \times 2/3 { a4 g8 } | \times 2/3 { a4 h8 c4 d8 } |
   } {
-    a2 | \times 2/3 { c'8 b a b a g }
+    a2 | \times 2/3 { c8 h a h a g }
   } }
 }
 
@@ -100,8 +110,8 @@ FChords = \chordmode {
 
 G = \relative c' {
   \repeat volta 2 {
-    \times 2/3 { e4 fis 8 gis4 fis8 | gis8 a4 gis4 gis8 | e4 fis8 gis4 fis8 | fis4 e8 dis4 h8 } |
-    \times 2/3 { e4 fis 8 gis4 fis8 | gis8 a4 gis4 gis8 | fis8 gis4 gis8 fis e | fis4 h,8 } fis'4 |
+    \times 2/3 { e4 fis8 gis4 fis8 | gis8 a4 gis4 gis8 | e4 fis8 gis4 fis8 | fis4 e8 dis4 h8 } |
+    \times 2/3 { e4 fis8 gis4 fis8 | gis8 a4 gis4 gis8 | fis4 gis8 gis8 fis e | fis4 h,8 } fis'4 |
   }
 }
 
@@ -143,8 +153,11 @@ melody = {
   \transpose g a \F \break
   \key e \major
   \G \break
+
   \key a \major
-  \transpose g a \F \bar "||"
+  \E \break
+  \key e \major
+  \transpose a e \E \break
 }
 
 harmonies = {
@@ -164,7 +177,9 @@ harmonies = {
   \FChords
   \transpose g a \FChords
   \GChords
-  \transpose g a \FChords
+
+  \EChords
+  \transpose a e \EChords
 }
 
 \header {
