@@ -103,6 +103,8 @@ czestaKrywicaMelody = {
   \time 4/4
   \key g \major
 
+  \repeat volta 2 { \czestaKrywicaMelodyII }
+  \break
   \repeat volta 2 { \czestaKrywicaMelodyI }
   \break
   \repeat volta 2 { \czestaKrywicaMelodyII }
@@ -113,6 +115,7 @@ czestaKrywicaMelody = {
   \key c \minor
   \repeat volta 2 { \czestaKrywicaMelodyIV }
   \break
+
   \key g \major
   \repeat volta 2 { \czestaKrywicaMelodyI }
   \break
@@ -121,12 +124,17 @@ czestaKrywicaMelody = {
   \repeat volta 2 { \czestaKrywicaMelodyVII }
   \break
   \repeat volta 2 { \czestaKrywicaMelodyV }
+  \break
+  \repeat volta 2 { \czestaKrywicaMelodyVII }
+  \break
+  \repeat volta 2 { \czestaKrywicaMelodyVI }
 }
 czestaKrywicaChords = {
   \germanChords
   \set chordNameLowercaseMinor = ##t
   \set chordChanges = ##t
 
+  \czestaKrywicaChordsII
   \czestaKrywicaChordsI
   \czestaKrywicaChordsII
   \czestaKrywicaChordsIII
@@ -135,6 +143,8 @@ czestaKrywicaChords = {
   \czestaKrywicaChordsVI
   \czestaKrywicaChordsVII
   \czestaKrywicaChordsV
+  \czestaKrywicaChordsVII
+  \czestaKrywicaChordsVI
 }
 
 \header {
