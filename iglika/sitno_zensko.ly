@@ -300,7 +300,7 @@ sitnoZenskoHarmonies = {
 }
 \score {
   <<
-    \new Staff \transpose h d' \sitnoZenskoMelody
-    \new ChordNames \transpose h d' \sitnoZenskoHarmonies
+    \new Staff \transpose h a \sitnoZenskoMelody
+    \new ChordNames \transpose h a \sitnoZenskoHarmonies
   >>
 }
