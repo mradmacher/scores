@@ -7,7 +7,7 @@ tupletSettings = {
   \override TupletBracket #'bracket-visibility = ##f
 }
 zapojasMelodyI = \relative c' {
-  \times 2/3 { 
+  \times 2/3 {
     f8 g f g4 a8 |
   }
   a4~ \times 2/3 { a8 g a } |
@@ -20,8 +20,9 @@ zapojasMelodyI = \relative c' {
     c'8 d c c b a |
     g4 g8 f g a |
     g4 g8 f e d |
+    c f es
   }
-  d16 c f es d4 |
+  d4 |
   d2 |
 }
 zapojasMelodyIVoltaI = \relative c'{
@@ -68,8 +69,9 @@ zapojasMelodyII = \relative c'' {
     c8 d c c b a |
     g4 g8 f g a |
     g4 g8 f e d |
+    c f es
     }
-    d16 c f es d4 |
+    d4 |
     d2 |
   \times 2/3 {
     d8 d a d4 s8 |
@@ -97,7 +99,7 @@ zapojasMelodyIII = \relative c'' {
     c4 b8 b a g |
     c8 d4 c4 b8 |
     a4 g8 f4 e8 |
-    f8 g g f f g |
+    f8 g g g f g |
     a8 b a a f f |
     g4 f8 e e c |
   }
@@ -146,7 +148,10 @@ zapojasMelodyIVVoltaI = \relative c' {
   }
 }
 zapojasMelodyIVVoltaII = \relative c' {
-  d4 r4 |
+  d4
+  \times 2/3 {
+    g8 as h |
+  }
 }
 zapojasChordsIV = \chordmode {
   g2:m |
@@ -192,8 +197,8 @@ zapojasChordsV = \chordmode {
 
 zapojasMelodyVI = \relative c'' {
   \times 2/3 {
-    c4 h8 as h h |
-    as8 g f g g g |
+    c4 h8 as c c |
+    h as f g g g |
     as4 c8 h as f |
     g8 g g f e d |
 
@@ -245,12 +250,12 @@ zapojasMelodyVIII = \relative c'' {
     g8 a h c4 h8 |
     a4 c8 h4 d,8 |
     g4 c8 h g g |
-    a8 fis fis g d d |
+    a8 a fis g g d |
 
     g8 a h c4 h8 |
     a4 c8 h4 d,8 |
     g4 c8 h g g |
-    a8 fis fis g4 s8 |
+    a8 a fis g4 s8 |
   }
 }
 zapojasChordsVIII = \chordmode {
@@ -292,24 +297,24 @@ zapojasChordsIX = \chordmode {
 
 zapojasMelodyX = \relative c'' {
   \times 2/3 {
-    g8 g g f e d |
-    f8 e d cis d h |
-    d8 g, f' e d cis |
+    g'8 g g f e d |
+    f8 e d cis d g, |
+    h g f' e d cis |
     d8 d g, h d e |
 
     f8 g4 g8 g g |
-    f8 e d cis d h |
-    d8 g, f' e d cis |
+    f8 e d cis d g, |
+    h g f' e d cis |
   }
 }
 zapojasMelodyXVoltaI = \relative c' {
   \times 2/3 {
-    d8 d d h g g |
+    d'8 cis d h h g |
   }
 }
 zapojasMelodyXVoltaII = \relative c' {
   \times 2/3 {
-    d8 b h g4 s8 |
+    d'8 cis d h4 s8 |
   }
 }
 zapojasChordsX = \chordmode {
@@ -331,24 +336,24 @@ zapojasChordsXVoltaII = \chordmode {
 
 zapojasMelodyXI = \relative c' {
   \times 2/3 {
-    d4 f8 e d cis |
-    d8 d g, h h d |
-    e8 f4 e8 e cis |
-    d8 d g, h h g |
+    d'4 f8 e d cis |
+    d8 d g, h c cis |
+    d8 f4 e8 d cis |
+    d8 cis d h h g |
 
     d'4 f8 e d cis |
-    d8 d g, h h d |
-    e8 f4 e8 e cis |
+    d8 d g, h c cis |
+    d8 f4 e8 d cis |
   }
 }
 zapojasMelodyXIVoltaI = \relative c' {
   \times 2/3 {
-    d8 d d h g g |
+    d'8 cis d h h g |
   }
 }
 zapojasMelodyXIVoltaII = \relative c' {
   \times 2/3 {
-    d8 b h g4 s8 |
+    d'8 b h g4 s8 |
   }
 }
 
@@ -371,14 +376,14 @@ zapojasChordsXIVoltaII = \chordmode {
 
 zapojasMelodyXII = \relative c'' {
   \times 2/3 {
-    g8 a g g f e |
+    g8 a g g fis e |
     e8 h e g a h |
-    g8 a g g f e |
+    g8 a g g fis e |
     d8 f e e4 s8 |
 
-    g8 a g g f e |
+    g8 a g g fis e |
     e8 h e g a h |
-    g8 a g g f e |
+    g8 a g g fis e |
     d8 f e e4 s8 |
   }
 }
@@ -406,7 +411,7 @@ zapojasMelodyXIII = \relative c' {
   \times 2/3 {
     a4 c8 h4 g8 |
     a4 c8 h4 g8 |
-    a8 fis fis d4 s8 |
+    a8 g a d,4 s8 |
   }
 }
 zapojasChordsXIII = \chordmode {
@@ -425,15 +430,15 @@ zapojasMelodyXIV = \relative c' {
   \times 2/3 {
     d4 c'8 h4 g8 |
     a8 g a d, d fis |
-    a4 c8 h4 g8 |
-    a8 fis fis d d fis |
+    d4 c'8 h4 g8 |
+    a8 g a fis fis d |
   }
 
   \times 2/3 {
     d4 c'8 h4 g8 |
     a8 g a d, d fis |
-    a4 c8 h4 g8 |
-    a8 fis fis d4 s8 |
+    d4 c'8 h4 g8 |
+    a8 g a a4 s8 |
   }
 }
 zapojasChordsXIV = \chordmode {
@@ -456,8 +461,8 @@ zapojasMelodyXV = \relative c'' {
     h'4 as8 as g f |
     g8 g g f e d |
 
-    e8 f g as h h |
-    as8 g f g g d |
+    e8 f g as c c |
+    h as8 f g g d |
     h'4 as8 as g f |
     g g d g4 s8 |
   }
@@ -502,8 +507,8 @@ zapojasMelody = {
   \tupletSettings
   \key f \major
   \time 2/4
-  \repeat volta 2 { 
-    \zapojasMelodyI 
+  \repeat volta 2 {
+    \zapojasMelodyI
   } \alternative {
     { \zapojasMelodyIVoltaI } { \zapojasMelodyIVoltaII }
   }
@@ -512,15 +517,15 @@ zapojasMelody = {
   \repeat volta 2 { \zapojasMelodyII }
   \break
 
-  \repeat volta 2 { 
-    \zapojasMelodyIII 
+  \repeat volta 2 {
+    \zapojasMelodyIII
   } \alternative {
     { \zapojasMelodyIIIVoltaI } { \zapojasMelodyIIIVoltaII }
   }
   \break
 
-  \repeat volta 2 { 
-    \zapojasMelodyIV 
+  \repeat volta 2 {
+    \zapojasMelodyIV
   } \alternative {
     { \zapojasMelodyIVVoltaI } { \zapojasMelodyIVVoltaII }
   }
@@ -543,20 +548,21 @@ zapojasMelody = {
   \break
 
   \key c \major
-  \repeat volta 2 { 
-    \zapojasMelodyX 
+  \repeat volta 2 {
+    \zapojasMelodyX
   } \alternative {
     { \zapojasMelodyXVoltaI } { \zapojasMelodyXVoltaII }
   }
   \break
- 
-  \repeat volta 2 { 
-    \zapojasMelodyXI 
+
+  \repeat volta 2 {
+    \zapojasMelodyXI
   } \alternative {
     { \zapojasMelodyXIVoltaI } { \zapojasMelodyXIVoltaII }
   }
   \break
-  
+
+  \key e \minor
   \repeat volta 2 { \zapojasMelodyXII }
   \break
 
@@ -576,6 +582,7 @@ zapojasMelody = {
 }
 
 zapojasChords = {
+  \germanChords
   \set chordChanges = ##t
 
   \zapojasChordsI \zapojasChordsIVoltaI \zapojasChordsIVoltaI
