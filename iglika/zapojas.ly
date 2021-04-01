@@ -250,7 +250,7 @@ zapojasMelodyVIII = \relative c'' {
     g8 a h c4 h8 |
     a4 c8 h4 d,8 |
     g4 c8 h g g |
-    a8 a fis g g d |
+    a8 a fis g d d |
 
     g8 a h c4 h8 |
     a4 c8 h4 d,8 |
