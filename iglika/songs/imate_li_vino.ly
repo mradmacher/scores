@@ -32,10 +32,10 @@ vocal = \relative c' {
   \time 7/8
 
   d4 a8 d4 e | f4 e8 d2 | d4 a8 d4 e | f4 e8 d2 |
-  e4 f8 g4 a | g4 f8 e4 d | e4 d8 d4 d | cis4.~ cis2 | \break
+  d4 a8 d4 e | g4 f8 e4 d | e4 d8 cis4 b | a4.~ a2 | \break
   \repeat volta 2 {
-    a'4 a8 g4 f | a4.~ a2 | g4 f8 e4 f | g4.~ g2 |
-    e4 f8 g4 a | g4 f8 e4 d | e4 d8 d4 d | cis4.~ cis2 |
+    a'4 a8 g4 f | a4.~ a2 | g4 f8 e4 d | f4.~ f2 |
+    e4 f8 g4 a | g4 f8 e4 d | e4 d8 cis4 b | a4.~ a2 |
   }
 
 }
@@ -45,8 +45,8 @@ vocalChords = \chordmode {
   \set chordChanges = ##t
 
   d4.:m s2 | d4.:m s2 | d4.:m s2 | d4.:m s2 |
-  a4. s2 | a4. s2 | g4.:m s2 | a4. s2 |
-  d4.:m s2 | d4.:m s2 | a4. s2 | a4. s2 |
+  d4.:m s2 | a4. s2 | g4.:m s2 | a4. s2 |
+  d4.:m s2 | d4.:m s2 | a4. s2 | d4.:m s2 |
   a4. s2 | a4. s2 | g4.:m s2 | a4. s2 |
 }
 
