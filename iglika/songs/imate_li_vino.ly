@@ -31,8 +31,10 @@ vocal = \relative c' {
   \key d \minor
   \time 7/8
 
-  d4 a8 d4 e | f4 e8 d2 | d4 a8 d4 e | f4 e8 d2 |
-  d4 a8 d4 e | g4 f8 e4 d | e4 d8 cis4 b | a4.~ a2 | \break
+  \repeat volta 2 {
+    d4 a8 d4 e | f4 e8 d2 | d4 a8 d4 e | f4 e8 d2 |
+    d4 a8 d4 e | g4 f8 e4 d | e4 d8 cis4 b | a4.~ a2 | \break
+  }
   \repeat volta 2 {
     a'4 a8 g4 f | a4.~ a2 | g4 f8 e4 d | f4.~ f2 |
     e4 f8 g4 a | g4 f8 e4 d | e4 d8 cis4 b | a4.~ a2 |
