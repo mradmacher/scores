@@ -51,15 +51,14 @@ vocalChords = \chordmode {
 
 \score {
   <<
-    \new Staff \instrumental
-    \new ChordNames \instrumentalChords
+    \new Staff \transpose g f \instrumental
+    \new ChordNames \transpose g f \instrumentalChords
   >>
 }
 
 \score {
   <<
-    \new Staff \vocal
-    \new ChordNames \vocalChords
+    \new Staff \transpose g f \vocal
+    \new ChordNames \transpose g f \vocalChords
   >>
 }
-
