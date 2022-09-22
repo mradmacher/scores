@@ -51,13 +51,13 @@ cChords = \chordmode {
 
 dMelody = \relative c'' {
   \key h \minor
-  h4 h | cis8 d h4 | cis8 d e4 | h4. fis'8 | fis8 e d4 | d8 cis h4 | cis8 a h cis | h8 h h g | \break
-  h4 h | cis8 d h4 | cis8 d e4 | h4. fis'8 | fis8 e d4 | d8 cis h4 | d8 a d e | d8 c h a |
+  h8 h h h | cis8 d h4 | cis8 d e4 | h4. fis'8 | fis8 e d4 | d8 cis h4 | cis8 a h cis | h8 h h g | \break
+  h8 h h h | cis8 d h4 | cis8 d e4 | h4. fis'8 | fis8 e d4 | d8 cis h4 | d8 a d e | d8 c h a |
 }
 
 dChords = \chordmode {
   h2:m | h2:m | e2:m | h2:m | h2:m | e2:m | fis2:m | h2:m |
-  g2 | e2 | a2 | e2:m | h2:m | h2:m | d:m | d2:7 |
+  g2 | e2 | a2 | e2:m | h2:m | h2:m | d | d2:7 |
 }
 
 eIntroMelody = \relative c'' {
