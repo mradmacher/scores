@@ -62,27 +62,21 @@ eChords = \chordmode {
 }
 
 fMelody = \relative c' {
-  \key e \major
-  \repeat volta 2 {
-    e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis e e4 |
-    e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis e e4 |
-  }
+  e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis e e4 |
+  e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis e e4 |
 }
 fChords = \chordmode {
   e2 | h2:m | e2 | h4:m e |
-  e2 | h2:m | e2 | h4:m e |
+  e2 | h2:m | e2 | h4:m e | \bar "||"
 }
 
 gMelody = \relative c' {
-  \key e \major
-  \repeat volta 2 {
-    d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis e e4 |
-    d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis e e4 |
-  }
+  d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis e e4 |
+  d16 e fis8 d16 cis cis h | e16 e fis gis a h gis8 | d16 e fis8 d16 cis cis h | e16 e fis e e4 |
 }
 gChords = \chordmode {
   h2:m | e2 | h2:m | e2 |
-  h2:m | e2 | h2:m | e2 |
+  h2:m | e2 | h2:m | e2 | \bar "||"
 }
 
 melody = {
@@ -104,6 +98,7 @@ melody = {
   \mark \markup { \circle { \bold 5 } }
   \eMelody \break
   \mark \markup { \circle { \bold 6 } }
+  \key e \major
   \fMelody \break
   \mark \markup { \circle { \bold 7 } }
   \gMelody \break
