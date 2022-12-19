@@ -85,8 +85,8 @@ fChords = \chordmode {
 
 gMelody = \relative c'' {
   \repeat volta 2 {
-    a8 a a b cis cis cis | a8 cis b a a e e | a8 e b' b cis cis cis | d8 cis b a a e e |
-    a8 a a b cis cis cis | a8 cis b a a e e | a8 e b' b cis cis cis | d8 cis b a a4. |
+    a8 a a b cis cis cis | a8 cis b a a e e | a8 e a b cis cis cis | d8 cis b a a e e |
+    a8 a a b cis cis cis | a8 cis b a a e e | a8 e a b cis cis cis | d8 cis b a a4. |
   }
 }
 gChords = \chordmode {
