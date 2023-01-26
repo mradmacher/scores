@@ -7,8 +7,8 @@ instrumentalUpper = \relative c'' {
   \time 7/16
   \set Timing.beatStructure = #'(3 4)
 
-  g8 a16 b a g a | a8 b16 a g f8 | a8. f8 g | f16 e d e f g8 |
-  g8 a16 b a g a | a8 b16 a g f8 | a8. f8 g | f8. e8 e | \partial 8. e8. | \bar "||"
+  g8 a16 b a g b | a8 b16 a g f8 | a8. f8 g | f16 e d e f g8 |
+  g8 a16 b a g b | a8 b16 a g f8 | a8. f8 g | f8. e8 e | \partial 8. e8. | \bar "||"
 }
 instrumentalLower = \relative c' {
   \clef treble
@@ -16,8 +16,8 @@ instrumentalLower = \relative c' {
   \time 7/16
   \set Timing.beatStructure = #'(3 4)
 
-  e8 f16 g f e f | f8 g16 f e d8 | f8. d8 e | d16 c h c16 d e8 |
-  e8 f16 g f e f | f8 g16 f e d8 | f8. d8 e | d8. c8 c | \partial 8. c8. | \bar "||"
+  e8 f16 g f e g | f8 g16 f e d8 | f8. d8 e | d16 c h c16 d e8 |
+  e8 f16 g f e g | f8 g16 f e d8 | f8. d8 e | d8. c8 c | \partial 8. c8. | \bar "||"
 }
 
 instrumentalChords = \chordmode {
@@ -76,7 +76,7 @@ vocalChords = \chordmode {
 
 \header {
   title = "Либе ле Косто"
-  tagline = "01.2023"
+  tagline = "26.01.2023"
 }
 
 \score {
