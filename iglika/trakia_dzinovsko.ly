@@ -154,41 +154,42 @@ melody = {
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
 
   \xMelody \break
-  \mark \markup { \circle { \bold 1 } \musicglyph "scripts.segno" }
+  \mark \markup { \circle { \bold 1 } }
   \aMelody \break
   \mark \markup { \circle { \bold 2 } }
-  \bMelody
-  \once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
-  \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-  \mark \markup { \italic "D.S." }
-  \break
+  \bMelody \break
   \mark \markup { \circle { \bold 3 } }
+  \aMelody \break
+  \mark \markup { \circle { \bold 4 } }
+  \bMelody
+  \mark \markup { \circle { \bold 5 } }
   \cMelody \break
   \ccMelody \break
-  \mark \markup { \circle { \bold 4 } }
-  \dMelody \break
-  \mark \markup { \circle { \bold 5 } }
-  \eMelody \break
   \mark \markup { \circle { \bold 6 } }
-  \ddMelody \break
+  \dMelody \break
   \mark \markup { \circle { \bold 7 } }
+  \eMelody \break
+  \mark \markup { \circle { \bold 8 } }
+  \ddMelody \break
+  \mark \markup { \circle { \bold 9 } }
   \fMelody \break
 
-  \mark \markup { \circle { \bold 8 } }
-  \aMelody \break
-  \mark \markup { \circle { \bold 9 } }
-  \bMelody \break
   \mark \markup { \circle { \bold 10 } }
+  \aMelody \break
+  \mark \markup { \circle { \bold 11 } }
+  \bMelody \break
+  \mark \markup { \circle { \bold 12 } }
   \cMelody \break
   \ccMelody \break
 
-  \mark \markup { \circle { \bold 11 } \musicglyph "scripts.segno" }
+  \mark \markup { \circle { \bold 13 } }
   \gMelody \break
-  \hMelody
-  \once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
-  \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-  \mark \markup { \italic "D.S." }
-  \break
+  \mark \markup { \circle { \bold 14 } }
+  \hMelody \break
+  \mark \markup { \circle { \bold 15 } }
+  \gMelody \break
+  \mark \markup { \circle { \bold 16 } }
+  \hMelody \break
 }
 
 harmonies = \chords {
@@ -197,6 +198,8 @@ harmonies = \chords {
   \set chordChanges = ##t
 
   \xChords
+  \aChords
+  \bChords
   \aChords
   \bChords
   \cChords
@@ -213,11 +216,13 @@ harmonies = \chords {
 
   \gChords
   \hChords
+  \gChords
+  \hChords
 }
 
 \header {
   title = "Тракия - Джиновско"
-  tagline = "2022"
+  tagline = "09.02.2022"
 }
 \score {
   <<
