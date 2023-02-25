@@ -133,7 +133,7 @@ harmonies = \chords {
 
 \header {
   title = "Тракия - Ръченица"
-  tagline = "25.02.2022"
+  tagline = "25.02.2023"
 }
 \score {
   <<
