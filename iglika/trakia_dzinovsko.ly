@@ -230,4 +230,3 @@ harmonies = \chords {
     \new ChordNames \harmonies
   >>
 }
-
