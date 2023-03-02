@@ -69,14 +69,14 @@ vocalChords = \chordmode {
   c4.. |
   c4.. |
 
-  c4.. | f8. c4 | a4..:m | d8.:m g4 | g8. c4 |
+  c4.. | f8. c4 | a4..:m | d4..:m | g4.. |
   c4.. |
   \partial 8. c8. |
 }
 
 \header {
   title = "Либе ле Косто"
-  tagline = "26.01.2023"
+  tagline = "25.02.2023"
 }
 
 \score {
