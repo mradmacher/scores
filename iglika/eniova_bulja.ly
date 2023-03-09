@@ -1,13 +1,27 @@
 \version "2.22.1"
 \include "deutsch.ly"
 
+introMelody = \relative c'' {
+  \key g \major
+  g4 c8 h | d8 g, a4 | d4 c8 h | g4 c8 h | d8 g, a4 | a4 a |
+}
+introChords = \chordmode {
+  g2 | a2:m | e2:m | c2 | a2 | d2 |
+}
+
 aMelody = \relative c'' {
   \key g \major
-  \repeat volta 2 {
-    g4 d'8 c | d8 e e c | d4 c8 h | g4 d'8 c | d8 e e c | d4 c8 h | \break
-    g4 c8 h | d8 g, a4 | d4 c8 h | g4 c8 h | d8 g, a4 | a4 a | \break
-    g4 c8 h | d8 g, a4 | d4 c8 h | g4 c8 h | d8 g, a4 | a4 a |
-  }
+  g4 d'8 c | d8 e e c | d4 c8 h | g4 d'8 c | d8 e e c | d4 c8 h | \break
+  g4 c8 h | d8 g, a4 | d4 c8 h | g4 c8 h | d8 g, a4 | a4 a | \break
+  g4 c8 h | d8 g, a4 | d4 c8 h | g4 c8 h | d8 g, a4 | a4 a |
+}
+aaMelody = \relative c'' {
+  \key g \major
+  \repeat volta 2 { \aMelody }
+}
+abMelody = \relative c'' {
+  \key g \major
+  \aMelody
 }
 aChords = \chordmode {
   g2 | c2 | d2 | g2 | c2 | d2
@@ -109,43 +123,64 @@ gChords = \chordmode {
 eniovaBuljaStaff = {
   \clef treble
   \time 2/4
+  \mark \markup { "Wstęp" }
+  \introMelody \break
   \mark \markup { \circle { \bold 1 } }
-  \aMelody \break
-  \mark \markup { \circle { \bold 2 } }
+  \aaMelody \break
+  \mark \markup { \circle { \bold 2 } \musicglyph "scripts.segno" }
   \bMelody \break
   \cMelody \break
   \mark \markup { \circle { \bold 3 } }
-  \aMelody \break
+  \abMelody \break
   \mark \markup { \circle { \bold 4 } }
   \dMelody \break
   \mark \markup { \circle { \bold 5 } }
-  \aMelody \break
+  \abMelody \break
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'self-alignment-X = #right
+  \mark \markup { "Fine" }
 
-  \pageBreak
+  %\mark \markup { \circle { \bold 6 } }
+  \bMelody \break
+  \cMelody \break
+  \mark \markup { \circle { \bold 7 } }
+  \abMelody \break
+
   \time 11/8
   \set Timing.beatStructure = #'(2 2 3 2 2)
+  \mark \markup { \bold "Kopanica" }
   \eIntroMelody \break
-  \mark \markup { \circle { \bold 6 } }
+  \mark \markup { \circle { \bold a } }
   \eMelody \break
-  \mark \markup { \circle { \bold 7 } }
+  \mark \markup { \circle { \bold b } }
   \fMelody \break
-  \mark \markup { \circle { \bold 8 } }
+  \mark \markup { \circle { \bold c } }
   \transpose d g \eMelody \break
-  \mark \markup { \circle { \bold 9 } }
+  \mark \markup { \circle { \bold d } }
   \gMelody \break
-  \mark \markup { \circle { \bold 10 } }
-  \eMelody \break
+  \mark \markup { \circle { \bold e } }
+  \eMelody
+  \time 2/4
+  r4 r |
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'self-alignment-X = #right
+  \mark \markup { "D.S. al Fine" }
 }
 
 eniovaBuljaChords = {
   \germanChords
   \set chordNameLowercaseMinor = ##t
   \set chordChanges = ##t
+  \introChords
   \aChords
   \bChords
   \cChords
   \aChords
   \dChords
+  \aChords
+
+  \bChords
+  \cChords
   \aChords
 
   \eIntroChords
@@ -156,7 +191,10 @@ eniovaBuljaChords = {
   \eChords
 }
 
-\header { title = \markup { Еньова буля } }
+\header {
+  title = \markup { Еньова буля }
+  tagline = "09.03.2023"
+}
 \score {
   <<
     \new Staff \eniovaBuljaStaff
