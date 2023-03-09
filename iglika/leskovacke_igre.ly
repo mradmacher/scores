@@ -158,20 +158,191 @@ dChords = \chordmode {
   g2 | g2  | g2 | f4:m g4 |
 }
 
-eMelody = \relative c'' {
+eRepeatedMelody = \relative c' {
+  \repeat volta 2 {
+    \times 2/3 {
+      e8 f g e e c | e f g e e c | e f g e e c | d d g, d' d g, |
+      e'8 f g e e c | e f g e e c | e f g e e c | d d g, } d'4  |
+  } \break
+  \repeat volta 2 {
+    e4 g | \times 2/3 { a8 g f e e c } | g'4 \times 2/3 { a8 g f | e f g e e c } |
+    e4 g | \times 2/3 { a8 g f e e c } | g'4 \times 2/3 { a8 g f | e f g } e4 |
+  } \break
+}
+eMelody = \relative c' {
   \key c \major
-  s2
+  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \override TupletNumber #'transparent = ##t
+
+  \eRepeatedMelody
+
+  \repeat volta 2 {
+    g'4 a | b a | g fis | g e |
+  }
+  \repeat volta 2 {
+    g fis | g e | g fis | g e |
+  } \break
+  \repeat volta 2 {
+    g4 a | b a | g fis | g e |
+  }
+  \repeat volta 2 {
+    g fis | g e | g fis | g e |
+  } \break
+
+  \key g \major
+  \transpose c g \eRepeatedMelody
+
+  \key a \minor
+  \times 2/3 {
+    e8 e d e e d | e e d e e d | e f gis f d f | e4 e8 e e d |
+    e8 e d e e d | e e d e e d | e f gis f d f | e4 e8
+  } e4 | \break
+
+  \times 2/3 { gis8 a h gis gis f | gis8 a h gis gis f | gis8 a h gis gis f | a4 d,8 } f4 |
+  \times 2/3 { gis8 a h gis gis f | gis8 a h gis gis f | gis8 a h gis gis f | f4 e8 } e4 | \break
+
+  \repeat volta 2 {
+    \times 2/3 { gis8 a h a gis f } | e4 h' | \times 2/3 { gis8 a h a gis f } | e4 e |
+  }
+  \times 2/3 { gis8 a h a gis f } | e4 h' | \times 2/3 { gis8 a h a gis f } | e4 e | \break
+
+  \key c \major
+  \repeat volta 2 {
+    \times 2/3 {
+      c'8 c g e' e g, | f'8 f g, e' e g, | c8 c g d' d g, | c8 c d d d g, |
+      c8 c g e' e g, | f'8 f g, e' e g, | c8 c g d' d g, |
+    }
+  }
+  \alternative {
+    { \times 2/3 { c8 c d h h g } | }
+    { d'4 r4 }
+  } \break
+
+  \repeat volta 2 {
+    \times 2/3 {
+      h4 c8 d d c | h4 c8 d d c | d es d c h c | d4 d8 d d g, |
+      h4 c8 d d c | h4 c8 d d c | d es d c h c |
+    }
+  }
+  \alternative {
+    { \times 2/3 { d4 d8 h h g | } }
+    { d'4 r4 }
+  } \break
+
+  \repeat volta 2 {
+    \times 2/3 {
+      f8 e d f e d | f e d c c g | f' e d f e d | c c g c d e |
+      f8 e d f e d | f e d c c g | f' e d f e d |
+    }
+  }
+  \alternative {
+    { \times 2/3 { c c g } c4 | }
+    { c4 r4 | }
+  } \break
+
+  \key f \major
+  \repeat volta 2 {
+    \times 2/3 {
+      b'8 a g b a g | b a g f f c | b' a g b a g | f f c f g a | \noBreak
+      b8 a g b a g | b a g f f c | b' a g b a g | \noBreak
+    }
+  }
+  \alternative {
+    { \times 2/3 { f f c } f4 | }
+    { f4 r4 }
+  } \break
+
+}
+
+eRepeatedChords = \chordmode {
+  c2 | c2 | c2 | g2 | c2 | c2 | c2 | g2 |
+  c2 | c2 | c2 | c2 | c2 | c2 | c2 | c2 |
 }
 eChords = \chordmode {
-  s2
+  \eRepeatedChords
+
+  c2:7 | c2:7 | c2:7 | c2:7 |
+  c2:7 | c2:7 | c2:7 | c2:7 |
+  c2:7 | c2:7 | c2:7 | c2:7 |
+  c2:7 | c2:7 | c2:7 | c2:7 |
+
+  \transpose c g \eRepeatedChords
+
+  e2:7 | e2:7 | d2:m | e2:7 |
+  e2:7 | e2:7 | d2:m | e2:7 |
+
+  e2:7 | e2:7 | e2:7 | d2:m | e2:7 | e2:7 | e2:7 | e2:7 |
+
+  d2:m | e2:7 | d2:m | e2:7 |
+  d2:m | e2:7 | d2:m | e2:7 |
+
+  c2 | c2 | c2 | g2 | c2 | c2 | c2 |
+  g2 |
+  g2 |
+
+  g2 | g2 | g2 | g2 | g2 | g2 | g2 |
+  g2 |
+  g2 |
+
+  g2 | g4 c4 | g2 | c2 |
+  g2 | g4 c4 | g2 |
+  c2 |
+  c2 |
+
+  c2 | c4 f4 | c2 | f2 |
+  c2 | c4 f4 | c2 |
+  f2 |
+  f2 |
 }
 
 fMelody = \relative c'' {
   \key g \minor
-  s2
+  \time 7/8
+  \set Timing.beatStructure = #'(2 2 3)
+  <<f4 c a>> <<f'4 c a>> <<f'4 c a>> <<f'8 c a>> | <<f'4 c a>> <<f'4 c a>> <<f'4 c a>> <<f'8 c a>> |
+  <<ges'4 es b>> <<ges'4 es b>> <<ges'4 es b>> <<ges'8 es b>> | <<f'4 c a>> <<f'4 c a>> <<f'4 c a>> r8 |
+  \break
+
+  \mark \markup { \musicglyph "scripts.segno" }
+  \repeat volta 2 {
+    b8 c a c b a c | \noBreak c b a f g g d | \noBreak b'8 c a c b a c | \noBreak c b a f g g d | \noBreak
+    b'8 c a c b a c | \noBreak c b a f g g d | \noBreak f f e f g as f | \noBreak g g g d' g, g d |
+  }
+  \break
+
+  \repeat volta 2 {
+    g4 c8 d d c d | g,4 b8 c c b c | g4 a8 b b a g | g a a f g g d | \noBreak
+    g4 c8 d d c d | g,4 b8 c c b c | g4 a8 b b a g | g a a f g4. |
+  }
+  \break
+
+  c2.. | c2.. | d8 d d b c c a | b b b g a a f |
+  g'8 f f es es es d | c b b a a a g | f es es d d d c | b a a g g4. |
+  \break
+
+  \repeat volta 2 {
+    g'4 a8 b b a g | \noBreak g a a f g g e | \noBreak f4 e8 f g as f | \noBreak g g g d' g, g d | \noBreak
+    g4 a8 b b a g | \noBreak g a a f g g e | \noBreak f4 e8 f g as f | \noBreak g g g d' g,4. | \noBreak
+  }
+  \break
+
+  \repeat volta 2 {
+    g8 d a' b b a g | \noBreak g8 d a' b b a g | \noBreak g8 d a' b b a g | \noBreak g8 a a f g g d | \noBreak
+    g8 d a' b b a g | \noBreak g8 d a' b b a g | \noBreak g8 d a' b b a g \mark \markup { "D.S. al " \musicglyph "scripts.segno" } | \noBreak g8 a a f g4. | \noBreak
+  }
+
 }
 fChords = \chordmode {
-  s2
+  f2.. |  f2.. | es2..:m | f2.. |
+
+  f2.. | f2 g4.:m | f2.. | f2 g4.:m | f2.. | f2 g4.:m | f2..:m | g2..:m |
+  g2..:m | c2..:m | es2.. | f2 g4.:m | g2..:m | c2..:m | es2.. | f2 g4.:m |
+
+  f2.. | f2.. | g2..:m | g2:m f4. | g2..:m | c2..:m | f2.. | g2..:m |
+
+  g2..:m | f2 c4. | f2..:m | g2..:m | g2..:m | f2 c4. | f2..:m | g2..:m |
+
+  g2..:m | g2..:m | g2..:m | f2 g4.:m | g2..:m | g2..:m | g2..:m | f2 g4.:m |
 }
 
 melody = {
@@ -194,7 +365,7 @@ melody = {
   \eMelody \break
 
   \mark \markup { \bold { Bugarka } }
-  \fMelody \break
+  \fMelody
 }
 
 harmonies = \chords {
@@ -212,7 +383,7 @@ harmonies = \chords {
 
 \header {
   title = "Leskovacke igre"
-  tagline = "03.01.2023"
+  tagline = "09.03.2023"
 }
 \score {
   <<
