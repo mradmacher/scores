@@ -42,18 +42,6 @@ BChords = \chordmode {
   a2:m | e2:m | d2:m | e2:m |
 }
 
-C = \relative c' {
-  \times 2/3 { f8 e f a g f } | \times 2/3 { e4 h8 } e4 |
-  \acciaccatura e8 f4 \acciaccatura e8 f4 | e4 \times 2/3 { h'8 a g } |
-  \times 2/3 { f8 e f a g f } | \times 2/3 { e4 h8 } e4 |
-  \acciaccatura e8 f4 \acciaccatura e8 f4 | \times 2/3 { h8 a g  a g f } | \bar "||"
-}
-
-CChords = \chordmode {
-  d2:m | e2:m | d2:m | e2:m |
-  d2:m | e2:m | d2:m | e2:m |
-}
-
 D = \relative c'' {
   \repeat volta 2 {
     \acciaccatura e8 f4 \acciaccatura e8 f4 | \times 2/3 { g8 g f e e d } |
@@ -76,12 +64,12 @@ DChords = \chordmode {
 
 E = \relative c'' {
   \times 2/3 { e8 d cis cis h a } | \times 2/3 { a8 a e } a4 |
-  \times 2/3 { a8 h4 h4 d8 | cis8 h a a h cis } |
+  \times 2/3 { a8 h h h4 d8 | cis8 h a a h cis } |
   \times 2/3 { e8 d cis cis h a } | \times 2/3 { a8 a e } a4 |
-  \times 2/3 { a8 h4 h4 d8 } | \times 2/3 { cis8 h a } a4 | \break
+  \times 2/3 { a8 h h h4 d8 } | \times 2/3 { cis8 h a } a4 | \break
 
-  \times 2/3 { a8 h4 h4 d8 | cis8 h a a h cis } | e4 \times 2/3 { d4 e8 } | \times 2/3 { cis8 h a } a4 |
-  \times 2/3 { a8 h4 h4 d8 | cis8 h a a h cis } | e4 \times 2/3 { d4 e8 } | \times 2/3 { cis8 h a } a4 | \bar "||"
+  \times 2/3 { a8 h h h4 d8 | cis8 h a a h cis } | e4 \times 2/3 { d4 e8 } | \times 2/3 { cis8 h a } a4 |
+  \times 2/3 { a8 h h h4 d8 | cis8 h a a h cis } | e4 \times 2/3 { d4 e8 } | \times 2/3 { cis8 h a } a4 |
 }
 
 EChords = \chordmode {
@@ -93,8 +81,8 @@ EChords = \chordmode {
 }
 
 F = \relative c'' {
-  d4 d | \times 2/3 { h8 a g } g4 | \times 2/3 { g8 a4 a4 c8 } | \times 2/3 { h8 a g } d'4 |
-  d4 d | \times 2/3 { h8 a g } g4 | \times 2/3 { g8 a4 a4 c8 } | \times 2/3 { h8 a g } g4 | \break
+  d4 d | \times 2/3 { h8 a g } g4 | \times 2/3 { g8 a a a4 c8 } | \times 2/3 { h8 a g } d'4 |
+  d4 d | \times 2/3 { h8 a g } g4 | \times 2/3 { g8 a a a4 c8 } | \times 2/3 { h8 a g } g4 | \break
 
   h4 \times 2/3 { c4 h8 } | \times 2/3 { h8 a g } d'4 | d4 d | \times 2/3 { h8 a g } g4 |
   h4 \times 2/3 { c4 h8 } | \times 2/3 { h8 a g } d'4 | d4 d | \times 2/3 { h8 a g } g4 |
@@ -108,10 +96,10 @@ FChords = \chordmode {
   g2 | s2 | d2 | g2 |
 }
 
-G = \relative c' {
+G = \relative c'' {
   \repeat volta 2 {
-    \times 2/3 { e4 fis8 gis4 fis8 | gis8 a4 gis4 gis8 | e4 fis8 gis4 fis8 | fis4 e8 dis4 h8 } |
-    \times 2/3 { e4 fis8 gis4 fis8 | gis8 a4 gis4 gis8 | fis4 gis8 gis8 fis e | fis4 h,8 } fis'4 |
+    \times 2/3 { e4 fis8 gis4 fis8 | gis4 a8 gis4 fis8 | e4 fis8 gis4 fis8 | fis4 e8 dis4 h8 } |
+    \times 2/3 { e4 fis8 gis4 fis8 | gis4 a8 gis4 fis8 | e4 fis8 gis4 fis8 | fis4 h,8 } fis'4 |
   }
 }
 
@@ -126,13 +114,12 @@ melody = {
   \time 2/4
 
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
-  %\override TupletNumber #'transparent = ##t
-  %\override TupletBracket #'bracket-visibility = ##f
+  \override TupletNumber #'transparent = ##t
+  \override TupletBracket #'bracket-visibility = ##f
 
   \B \break
   \A \break
   \B \break
-  \C \break
   \A \break
   \D \break
 
@@ -146,8 +133,10 @@ melody = {
 
   \key a \minor
   \A \break
+  \pageBreak
 
   \key g \major
+  \mark \markup { \musicglyph "scripts.segno" }
   \F \break
   \key a \major
   \transpose g a \F \break
@@ -158,6 +147,9 @@ melody = {
   \E \break
   \key e \major
   \transpose a e \E \break
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'self-alignment-X = #right
+  \mark \markup { "D.S." }
 }
 
 harmonies = {
@@ -167,7 +159,6 @@ harmonies = {
   \BChords
   \AChords
   \BChords
-  \CChords
   \AChords
   \DChords
   \transpose a h \AChords
@@ -185,6 +176,7 @@ harmonies = {
 \header {
   title = "Завило се вито хоро"
   composer = "Bułgaria"
+  tagline = "09.03.2023"
 }
 \score {
  <<
