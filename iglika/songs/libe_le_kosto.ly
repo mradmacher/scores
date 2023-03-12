@@ -7,8 +7,11 @@ instrumentalUpper = \relative c'' {
   \time 7/16
   \set Timing.beatStructure = #'(3 4)
 
-  g8 a16 b a g b | a8 b16 a g f8 | a8. f8 g | f16 e d e f g8 |
-  g8 a16 b a g b | a8 b16 a g f8 | a8. f8 g | f8. e8 e | \partial 8. e8. | \bar "||"
+  \repeat volta 2 {
+    g8 a16 b a g b | a8 b16 a g f8 | a8. f8 g | f16 e d e f g8 |
+    g8 a16 b a g b | a8 b16 a g f8 | a8. f8 g | f8. e8 e |
+  }
+  \partial 8. e8. | \bar "||"
 }
 instrumentalLower = \relative c' {
   \clef treble
@@ -65,7 +68,7 @@ vocalChords = \chordmode {
   \germanChords
 
   \partial 4 s4 |
-  c4.. | f8. c4 | c4.. | f8. g4 | g8. c4 |
+  c4.. | f8. c4 | c4.. | f4.. | g4.. |
   c4.. |
   c4.. |
 
@@ -76,7 +79,7 @@ vocalChords = \chordmode {
 
 \header {
   title = "Либе ле Косто"
-  tagline = "25.02.2023"
+  tagline = "12.03.2023"
 }
 
 \score {
