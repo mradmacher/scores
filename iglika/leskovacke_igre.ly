@@ -96,13 +96,6 @@ bMelody = \relative c'' {
     \times 2/3 { a8 gis a } \times 2/3 { h8 c a } | h4 \times 2/3 { e8 dis e } |
     \times 2/3 { a,8 gis a } \times 2/3 { h8 c a } | h4 h |
   } \break
-
-  \mark \markup { \italic { wolniej } }
-  \repeat volta 2 {
-    \times 2/3 { dis8 e fis } \times 2/3 { dis8 e c } | dis4 \times 2/3 { c8 h a } | h4 \times 2/3 { dis8 e c } | dis4 \times 2/3 { c8 h a } |
-    \times 2/3 { dis8 e fis } \times 2/3 { dis8 e c } | dis4 \times 2/3 { c8 h a } | h4 \times 2/3 { dis8 e c } | \times 2/3 { h8 h fis } h4 |
-  } \break
-
 }
 bChords = \chordmode {
   h2 | h2 | h2 | h2 | h2 | h2 | h2 | h2 |
@@ -111,8 +104,6 @@ bChords = \chordmode {
 
   a2:m | e2 | a2:m | e2 |
   a2:m | e2 | a2:m | e2 |
-
-  h2 | h2 | h2 | h2 | h2 | h2 | h2 | h2 |
 }
 
 cMelody = \relative c' {
@@ -123,29 +114,23 @@ cChords = \chordmode {
 }
 
 dMelody = \relative c'' {
-  \key c \minor
-  \repeat volta 2 {
-    g8 d'16 c h h h as | h16 as g f g g g d | g8 d'16 c h h h as | h16 as g f g g g8 |
-    g8 d'16 c h h h as | h16 as g f g g g d | g8 d'16 c h h h as | h16 as g f g4 |
-  } \break
-
-  \repeat volta 2 {
-    g8 g16 as h8 h16 as | h16 as g f g g g d | g8 g16 as h8 h16 as | h16 as g f g g g8 |
-    g8 g16 as h8 h16 as | h16 as g f g g g d | g8 g16 as h8 h16 as | h16 as g f g4 |
-  } \break
-
-  \repeat volta 2 {
-    \key f \major
-    e16 f g8 g g16 g | c16 b a g a a a f | e16 f g8 g g16 g | c16 b a b a4 |
-  } \break
+  r2 | r2 | r2 | r2 | \break
 
   \key c \minor
-  \repeat volta 2 {
-    g8 d'16 c h h h as | h16 as g f g g g d | g8 d'16 c h h h as | h16 as g f g g g8 |
-    g8 d'16 c h h h as | h16 as g f g g g d | g8 d'16 c h h h as | h16 as g f g4 |
-  } \break
+  \mark \markup { \musicglyph "scripts.segno" }
+  g8 d'16 c h h h as | h16 as g f g g g d | g8 d'16 c h h h as | h16 as g f g g g8 |
+  g8 d'16 c h h h as | h16 as g f g g g d | g8 d'16 c h h h as | h16 as g f g4 | \bar "||" \break
+
+  g8 g16 as h8 h16 as | h16 as g f g g g d | g8 g16 as h8 h16 as | h16 as g f g g g8 |
+  g8 g16 as h8 h16 as | h16 as g f g g g d | g8 g16 as h8 h16 as | h16 as g f \mark \markup { "Fine" } g4 | \break
+
+  \key f \major
+  e16 f g8 g g16 g | c16 b a g a a a f | e16 f g8 g g16 g | c16 b a b a4 | \break
+  e16 f g8 g g16 g | c16 b a g a a a f | e16 f g8 g g16 g | c16 b a b \mark \markup { "D.S. al Fine" } a4 | \bar "||" \break
 }
 dChords = \chordmode {
+  s2 | s2 | s2 | s2 |
+
   g2 | g2 | g2 | f4:m g4 |
   g2 | g2  | g2 | f4:m g4 |
 
@@ -153,9 +138,7 @@ dChords = \chordmode {
   g2 | f4:m g4  | g2 | f4:m g4 |
 
   c2 | c4 f4 | c2 | c4 f4 |
-
-  g2 | g2 | g2 | f4:m g4 |
-  g2 | g2  | g2 | f4:m g4 |
+  c2 | c4 f4 | c2 | c4 f4 |
 }
 
 eRepeatedMelody = \relative c' {
@@ -173,6 +156,7 @@ eMelody = \relative c' {
   \key c \major
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
   \override TupletNumber #'transparent = ##t
+  \override TupletBracket #'bracket-visibility = ##f
 
   \eRepeatedMelody
 
@@ -383,7 +367,7 @@ harmonies = \chords {
 
 \header {
   title = "Leskovacke igre"
-  tagline = "09.03.2023"
+  tagline = "12.03.2023"
 }
 \score {
   <<
