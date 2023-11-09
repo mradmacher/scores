@@ -8,10 +8,10 @@ band = \relative c' {
   \set Timing.beatStructure = #'(2 2 2 3)
 
   \repeat volta 2 {
-    fis16 fis fis e  fis g fis e  e e e h  e8 e16 e e fis |
-    d16 d d cis  h cis a cis  h h h fis  h cis d e fis g |
+    fis16 fis fis e  fis g fis e  d e e h  e8 e16 e e fis |
+    d16 d d cis  h cis a cis  h h h a  h cis d e fis g |
 
-    fis16 fis fis e  a g fis e  e e e h  e8 e16 e e fis |
+    fis16 fis fis e  a g fis e  d e e h  e8 e16 e e fis |
   }
   \alternative {{
     d16 d d cis  h cis a cis  h h h fis  h fis h8 r8 |
@@ -50,15 +50,15 @@ chordsMelody = \chordmode {
   \germanChords
 
   h2:m g2 s8 | a2 d2 s8 |
-  d2 e2:m s8 | fis2 h2:m s8 |
+  d2 e2:m s8 | a2 h2:m s8 |
   e4:m s2.. | a2 h2:m s8 |
-  e2:m h2:m s8 | fis2 h2:m s8 |
+  e2:m h2:m s8 | a2 h2:m s8 |
 }
 
 
 \header{
   title = "Не си го продавај Кољо чифликот"
-  tagline = "08.11.2023"
+  tagline = "09.11.2023"
 }
 \score {
   <<
