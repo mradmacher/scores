@@ -20,7 +20,7 @@ bMelody = \relative c'' {
 }
 bChords = \chordmode {
   g2 c4. | c2 g4.:m | a2..:m | g2 c4. |
-  c2.. | c2 g4.:m | a2:m g4.:m | a2..:m |
+  g2 c4. | c2 g4.:m | a2:m g4.:m | a2..:m |
 }
 
 cMelody = \relative c'' {
@@ -133,7 +133,7 @@ harmonies = \chords {
 
 \header {
   title = "Тракия - Ръченица"
-  tagline = "25.02.2023"
+  tagline = "01.12.2023"
 }
 \score {
   <<
