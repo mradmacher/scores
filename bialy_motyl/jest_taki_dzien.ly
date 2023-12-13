@@ -15,6 +15,7 @@ accG = \relative c' {
   \break
   a'8 f4. g8 e4. | a8 f4. g8 e4. | a8 f4. e8 g4. | a4 f e d | \break
   a'8 f4. g8 e4. | a8 f4. g8 e4. | a,8 c4. e8 g4. | a8 f4 e8 d c h4 | c2 r2 |
+  \bar "||"
 }
 
 accD = \relative c {
@@ -27,6 +28,19 @@ accD = \relative c {
 
   f'2 c | f2 c | f2 c | d2 g2 |
   f2 c | f2 c | f2 c | d2 g2 | c,1 |
+}
+
+accC = \chordmode {
+  \set chordNameLowercaseMinor = ##t
+  c1 | c1 | c1 | c1 |
+
+  c1 | e1:m | a1:m | g1 |
+  c1 | e1:m | a1:m | g1 |
+
+  f2 c2 | f2 c2 |
+  f2 c2 | d2:m g2 |
+  f2 c2 | f2 c2 |
+  f2 c2 | d2:m g2 | c1 |
 }
 
 guitar = \relative c' {
@@ -58,6 +72,10 @@ guitar = \relative c' {
       <<
         \new Staff \accG
         \new Staff \accD
+        \new ChordNames {
+          \germanChords
+          \accC
+        }
       >>
 %    \new Staff \guitar
   >>
