@@ -10,8 +10,8 @@ melody = \relative c'' {
   \repeat volta 2 {
     \times 2/3 {
       cis8 cis cis eis fis fis | fis fis fis fis eis fis |
-      a8 a fis fis fis d | eis8 eis d d d h |
-      cis8 d h cis d fis | eis8 eis d d d h |
+      a8 a fis fis eis d | eis8 eis d d cis h |
+      cis8 d h cis d fis | eis8 eis d d cis h |
       eis8 d d  cis cis cis | cis cis cis cis cis h |
     }
   }
@@ -19,9 +19,9 @@ melody = \relative c'' {
 
   \repeat volta 2 {
     \times 2/3 {
-      cis8 d d eis eis d | d8 eis eis d d h |
-      gis'8 fis fis fis fis eis | d8 eis eis d d h |
-      cis d d eis eis d | d8 eis eis d d h |
+      cis8 d d eis eis d | d8 eis eis d cis h |
+      gis'8 fis fis fis fis eis | d8 eis eis d cis h |
+      cis d d eis eis d | d8 eis eis d cis h |
       eis8 d d cis cis cis |
       cis8 cis cis cis4.^"D.C." |
       \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
@@ -44,9 +44,9 @@ melody = \relative c'' {
   \repeat volta 2 {
     \times 2/3 {
       ais8 h h h' a a | fis8 a gis fis fis dis |
-      eis8 fis gis gis fis eis | eis8 d dis fis h, h |
+      eis8 fis gis gis fis fis | eis8 d dis fis fis h, |
       eis8 fis fis h a a | fis8 a gis fis fis dis |
-      eis8 fis gis gis fis eis | eis8 d dis h4. |
+      eis8 fis gis gis fis fis | eis8 d dis h4. |
     }
   }
   \break
