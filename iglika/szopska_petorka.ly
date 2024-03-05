@@ -19,7 +19,7 @@ melody = \relative c''' {
       \times 2/3 { e8 dis e g4 c,8 } |
     }{
       \set Score.repeatCommands = #'((volta "2, 4") end-repeat)
-      \times 2/3 { e4 c8 } c4 |
+      \times 2/3 { e8 dis e } c4 |
       \set Score.repeatCommands = #'(end-repeat)
   }}
   \break
@@ -32,10 +32,10 @@ melody = \relative c''' {
   }
   \alternative {{
       \set Score.repeatCommands = #'((volta "1, 3"))
-      \times 2/3 { e4 c8 c g c} |
+      \times 2/3 { e8 dis e c4 g8 } |
     }{
       \set Score.repeatCommands = #'((volta "2, 4") end-repeat)
-      \times 2/3 { e4 c8 } c4  |
+      \times 2/3 { e'8 dis e } c4  |
       \set Score.repeatCommands = #'(end-repeat)
   }}
   \break
@@ -43,19 +43,20 @@ melody = \relative c''' {
   \repeat volta 4 {
     \times 2/3 {
       c'8 h c d c b |
-      a4 b8 a4 g8 |
-      g4 a8 f4 e8 | }
+      a8 b8 c a4 g8 |
+      fis8 g a f4 e8 | }
   }
   \alternative {{
       \set Score.repeatCommands = #'((volta "1, 3"))
       \times 2/3 { e8 dis e g4 c,8 } |
     }{
       \set Score.repeatCommands = #'((volta "2, 4") end-repeat)
-      \times 2/3 { e4 c8 } c4  |
+      \times 2/3 { e8 dis e } c4  |
       \set Score.repeatCommands = #'(end-repeat)
   }}
   \break
 
+  \mark \markup { \musicglyph "scripts.segno" }
   \repeat volta 4 {
     \times 2/3 {
       g'4 c,8 b'4 g8 |
@@ -67,7 +68,7 @@ melody = \relative c''' {
       \times 2/3 { e8 dis e g4 c,8 } |
     }{
       \set Score.repeatCommands = #'((volta "2, 4") end-repeat)
-      \times 2/3 { e4 c8 } c4  |
+      \times 2/3 { e8 dis e } c4  |
       \set Score.repeatCommands = #'(end-repeat)
   }}
   \break
@@ -101,6 +102,9 @@ melody = \relative c''' {
       \set Score.repeatCommands = #'(end-repeat)
     }
   }
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'self-alignment-X = #right
+  \mark \markup { "Fine" }
   \break
 
   \repeat volta 2 {
@@ -135,12 +139,15 @@ melody = \relative c''' {
   \key f \major
   \repeat volta 2 {
     \times 2/3 {
-      c4 d8 dis4 e8 |
+      c8 g c d8 dis e8 |
       f8 g, f' e4 dis8 |
-      e4 fis8 g4 a8 |
-      b4 g8 fis4 e8 |
-      g4 a8 h4 c8 |
-      d4 c8 b4 g8 |
+      e8 g, e' fis8 g a |
+      b4 g8 f4 e8 |
+    }
+    \break
+    \times 2/3 {
+      g4 a8 b8 h c |
+      d4 c8 b4 a8 |
       g4 a8 f4 e8 |
     }
   }
@@ -149,15 +156,15 @@ melody = \relative c''' {
       \times 2/3 { e8 dis e g4 c,8 | }
     }
     {
-      \times 2/3 { e4 c8 } c4 |
+      \times 2/3 { e8 dis e } c4 |
     }
   }
   \break
 
   \repeat volta 4 {
     \times 2/3 {
-      g'4 a8 h4 c8 |
-      d4 c8 b4 g8 |
+      g'4 a8 b8 h c |
+      d4 c8 b4 a8 |
       g4 a8 f4 e8 | }
   }
   \alternative {{
@@ -165,9 +172,12 @@ melody = \relative c''' {
       \times 2/3 { e8 dis e g4 c,8 } |
     }{
       \set Score.repeatCommands = #'((volta "2, 4") end-repeat)
-      \times 2/3 { e4 c8 } c4  |
+      \times 2/3 { e8 dis e  } c4  |
       \set Score.repeatCommands = #'(end-repeat)
   }}
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'self-alignment-X = #right
+  \mark \markup { "D.S. al Fine" }
 }
 harmonies = \chords {
   \germanChords
@@ -203,7 +213,11 @@ harmonies = \chords {
   c2 | c2 |
 }
 
-\header { title = "Мирче Ацев" }
+\header {
+  title = "Шопска петорка"
+  composer = "Македонија"
+  tagline = "05.03.2024"
+}
 \score {
   <<
     \new Staff  \melody
