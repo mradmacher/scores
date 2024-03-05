@@ -4,7 +4,7 @@
 melody = \relative c' {
   \clef treble
   \time 2/4
-  \key cis \minor
+  \key fis \minor
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
 
   \mark \markup { \circle { \bold 1 } }
@@ -13,6 +13,7 @@ melody = \relative c' {
     eis16 fis fis eis eis d d cis | h cis cis gis cis4\mordent |
   }
 
+  \key h \major
   \mark \markup { \circle { \bold 2 } }
   \acciaccatura fis,16 ais16 h cis dis  dis e e dis |
   dis e e dis  dis e e dis |
@@ -24,13 +25,13 @@ melody = \relative c' {
   \mark \markup { \italic "D.C." }
   cis4 | \bar "|."
 
+  \key fis \minor
   \break
-  \acciaccatura { eis16 fis } gis2~ | gis2~ | gis2 |
+  \acciaccatura { eis'16 fis } gis2~ | gis2~ | gis2 |
   \break
 
-  \key cis \minor
   \mark \markup { \circle { \bold 3 } }
-  eis'16 fis gis gis  gis gis gis gis |
+  eis16 fis gis gis  gis gis gis gis |
   gis fis gis cis,  gis' fis eis d |
   gis fis eis d  cis cis cis cis |
   eis fis gis cis,  gis' ais h cis |
@@ -55,12 +56,12 @@ melody = \relative c' {
     gis16 fis eis d  cis4 |
   }
 
+  \key e \major
   \break
   h2~ | h |
   \break
 
   \mark \markup { \circle { \bold 5 } }
-  \key e \major
   \repeat volta 2 {
     a16 gis fis gis  fis eis fis dis |
     e8. dis16 dis h fis' h, |
@@ -70,8 +71,8 @@ melody = \relative c' {
   \break
 
   h16 fis dis' e  fis h, fis' h, |
-  \times 2/3 { a'16 gis fis } gis16 eis fis h, fis'8 |
-  h,16 fis dis' e  fis h, fis' h, |
+  \times 2/3 { a'16 gis fis } gis16 eis fis h, fis' h, |
+  h16 fis dis' e  fis h, fis' h, |
   \times 2/3 { a'16 gis fis } gis16 eis fis4 |
   \break
 
@@ -88,10 +89,10 @@ melody = \relative c' {
   \break
 
   \mark \markup { \circle { \bold 6 } }
-  \key cis \minor
+  \key fis \minor
   eis'16 fis fis gis  eis d d cis | cis h cis d eis fis gis cis, |
-  eis16 fis fis gis  eis d d cis | cis h d cis cis gis cis8 |
-  eis16 fis fis gis  eis d d cis | cis h cis d eis fis gis cis, |
+  eis16 fis fis gis  eis d d cis | cis h d cis cis gis cis gis |
+  eis'16 fis fis gis  eis d d cis | cis h cis d eis fis gis cis, |
   eis16 fis fis gis  eis d d cis | cis h d cis cis4 |
   \break
 
@@ -123,7 +124,7 @@ harmonies = \chordmode {
   cis2 | cis2 | cis2 | cis2 |
 
   h2 | h2 | h2 | h2 | h2 |
-  h2 | h4 fis4 | fis2 | fis2:m | cis2:m |
+  h2 | h4 fis4 | fis2 | fis2:m | cis4:m cis |
 
   cis2 | cis2 | cis2 |
 
@@ -148,18 +149,18 @@ harmonies = \chordmode {
   cis2 | cis2 | cis2 | cis2 | cis2 | cis2 | cis2 | cis2 |
 
   cis2 | cis2 | cis2 | cis2 |
-  cis2 | cis2 | cis2 | cis4 cis4:m |
+  cis2 | cis2 | cis2 | cis2:m |
 }
 
 \header {
   title = "Криво женско оро"
   composer = "Македонија"
-  tagline = "04.03.2024"
+  tagline = "05.03.2024"
 }
 \score {
   <<
-    \new Staff \melody
-    \new ChordNames \harmonies
+    \new Staff \transpose h a \melody
+    \new ChordNames \transpose h a \harmonies
   >>
 }
 
