@@ -185,16 +185,16 @@ melodyChords = \chordmode {
 }
 \score {
   <<
-    \new Staff \melody
-    \new ChordNames \melodyChords
+    \new Staff \transpose a g \melody
+    \new ChordNames \transpose a g \melodyChords
   >>
 }
 \score {
   <<
     \new Staff
       \mark \markup { \ellipse { \bold Śpiew } }
-      \vocalMelody
-    \new ChordNames \vocalChords
+      \transpose a g \vocalMelody
+    \new ChordNames \transpose a g \vocalChords
   >>
 }
 
