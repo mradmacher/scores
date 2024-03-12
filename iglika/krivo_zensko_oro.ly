@@ -1,7 +1,7 @@
 \version "2.22.1"
 \include "deutsch.ly"
 
-melody = \relative c' {
+melody = \relative c'' {
   \clef treble
   \time 2/4
   \key fis \minor
@@ -12,6 +12,7 @@ melody = \relative c' {
     eis16 fis fis eis eis d d cis | h cis cis gis gis'8.\mordent cis,16 |
     eis16 fis fis eis eis d d cis | h cis cis gis cis4\mordent |
   }
+  \break
 
   \key h \major
   \mark \markup { \circle { \bold 2 } }
@@ -27,7 +28,7 @@ melody = \relative c' {
 
   \key fis \minor
   \break
-  \acciaccatura { eis'16 fis } gis2~ | gis2~ | gis2 |
+  \acciaccatura { eis16 fis } gis2~ | gis2~ | gis2 |
   \break
 
   \mark \markup { \circle { \bold 3 } }
@@ -63,17 +64,19 @@ melody = \relative c' {
 
   \mark \markup { \circle { \bold 5 } }
   \repeat volta 2 {
-    a16 gis fis gis  fis eis fis dis |
+    a'16 gis fis gis  fis eis fis dis |
     e8. dis16 dis h fis' h, |
     a'16 gis fis gis  fis eis fis dis |
     e8. dis16 h fis h fis |
   }
   \break
 
-  h16 fis dis' e  fis h, fis' h, |
-  \times 2/3 { a'16 gis fis } gis16 eis fis h, fis' h, |
-  h16 fis dis' e  fis h, fis' h, |
-  \times 2/3 { a'16 gis fis } gis16 eis fis4 |
+  \repeat volta 2 {
+    h16 fis dis' e  fis h, fis' h, |
+    \times 2/3 { a'16 gis fis } gis16 eis fis h, fis' h, |
+    h16 fis dis' e  fis h, fis' h, |
+    \times 2/3 { a'16 gis fis } gis16 eis fis4 |
+  }
   \break
 
   \repeat volta 2 {
@@ -90,7 +93,7 @@ melody = \relative c' {
 
   \mark \markup { \circle { \bold 6 } }
   \key fis \minor
-  eis'16 fis fis gis  eis d d cis | cis h cis d eis fis gis cis, |
+  eis16 fis fis gis  eis d d cis | cis h cis d eis fis gis cis, |
   eis16 fis fis gis  eis d d cis | cis h d cis cis gis cis gis |
   eis'16 fis fis gis  eis d d cis | cis h cis d eis fis gis cis, |
   eis16 fis fis gis  eis d d cis | cis h d cis cis4 |
@@ -155,7 +158,7 @@ harmonies = \chordmode {
 \header {
   title = "Криво женско оро"
   composer = "Македонија"
-  tagline = "05.03.2024"
+  tagline = "12.03.2024"
 }
 \score {
   <<
