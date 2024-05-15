@@ -31,9 +31,9 @@ pianoL = \relative c {
 solo = \relative c' {
   \time 2/4
 
-  d16 e f8 d f | e8 c a' g | d16 e f8 d f | e8 c g'4 |
+  d8 f8 d f | e8 c a' g | d8 f8 d f | e8 c g'4 |
   \repeat volta 2 {
-    d16 e f8 d f | e8 c g' a | d,16 e f8 d f | e8 c c4 |
+    d8 f8 d f | e8 c g' a | d,8 f8 d f | e8 c c4 |
   }
 }
 
