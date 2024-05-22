@@ -76,6 +76,87 @@ skrzypce = \relative c'' {
   }
 }
 
+gitara = \relative c' {
+  \key d \minor
+  \time 2/4
+
+  d8 <a' f'> d, <a' f'> | c, <g' e'> c, <g' e'> |
+  d <a' f'> d, <a' f'> | c, <g' e'> c, <g' e'> |
+  \repeat volta 2 {
+    d8 <a' f'> d, <a' f'> | c, <g' e'> c, <g' e'> |
+    d <a' f'> g, <g' h> |
+  } \alternative {
+    { c, <g' e'> c, <g' e'> | }
+    { c, <g' e'> <c, g' e'>4 | }
+  }
+}
+
+akordeonP = \relative c' {
+  \key d \minor
+  \time 2/4
+
+  d8 f d f | e4 c | d8 f d f | e4 c |
+  \repeat volta 2 {
+    d8 f d f | c8 e c e | d8 f d f |
+  } \alternative {
+    { e4 c | }
+    { e4 c | }
+  }
+  \break
+
+  <d f>4 <d f> | <c e> <c e> |
+  <d f> <d f> | <c e> <c e> |
+  \repeat volta 2 {
+    <d f> <d f> | <c e> <c e> |
+    <d f> <d f> |
+  }
+  \alternative {
+    { <c e> <c e> | }
+    { <c e> <c e> | }
+  }
+}
+akordeonL = \relative c {
+  \clef bass
+  \key d \minor
+  \time 2/4
+
+  d8 <f a d> d <f a d> | c <g' c e> c, <g' c e> |
+  d <f a d> d <f a d> | c <g' c e> c, <g' c e> |
+  \repeat volta 2 {
+    d <f a d> d <f a d> | c <g' c e> c, <g' c e> |
+    d <f a d> g, <g' h d> |
+  } \alternative {
+    { c, <g' c e> c, <g' c e> | }
+    { c, <g' c e> c,4 | }
+  }
+
+  d8 <f a d> d <f a d> | c <g' c e> c, <g' c e> |
+  d <f a d> d <f a d> | c <g' c e> c, <g' c e> |
+  \repeat volta 2 {
+    d <f a d> d <f a d> | c <g' c e> c, <g' c e> |
+    d <f a d> g, <g' h d> |
+  } \alternative {
+    { c, <g' c e> c, <g' c e> | }
+    { c, <g' c e> c,4 | }
+  }
+}
+akordeonC = \chordmode {
+  \set chordNameLowercaseMinor = ##t
+  d2:m | c |
+  d2:m | c |
+  d2:m | c |
+  d4:m g |
+  c2 |
+  c2 |
+
+  d2:m | c |
+  d2:m | c |
+  d2:m | c |
+  d4:m g |
+  c2 |
+  c2 |
+}
+
 wokal = \relative c' {
   \key d \minor
   \time 2/4
@@ -126,6 +207,31 @@ wokal = \relative c' {
     \skrzypce
   >>
 }
+
+\score {
+  \new Staff = gitara \with {
+    instrumentName = "Gitara"
+  }
+  <<
+    \gitara
+  >>
+}
+
+\score {
+  <<
+    \new PianoStaff \with { instrumentName = "Akordeon" }
+      <<
+        \new Staff \akordeonP
+        \new Staff \akordeonL
+        \new ChordNames {
+          \germanChords
+          \akordeonC
+        }
+      >>
+  >>
+}
+
+\pageBreak
 
 \score {
   \new Staff = wokal \with {
