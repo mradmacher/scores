@@ -113,8 +113,8 @@ bass = \relative c {
   <<
     \context Staff = "violin"
     \violin
-    \context Staff = "bass"
-    \bass
+    %\context Staff = "bass"
+    %\bass
   >>
 }
 
