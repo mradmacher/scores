@@ -70,18 +70,18 @@ melody = \relative c''' {
   \bandMelody
   \break
 
+  \mark \markup \with-color #red { \circle { \bold ! } }
+  \introMelody
+  \mark \markup { \ellipse { \bold Śpiew } }
+  s2
+  \break
+
   \repeat volta 2 {
     h16 c c h  a a a e | a h h a  gis gis gis e |
     gis16 a a gis  gis f f e | e f gis a  h h h e, |
     h'16 c c h  a a a8 | a16 h h a  gis gis gis8 |
     gis16 a a gis  gis f f e | e8 h e4 |
   }
-  \break
-
-  \mark \markup { \circle { \bold ! } }
-  \introMelody
-  \mark \markup { \ellipse { \bold Śpiew } }
-  s2
   \break
 
   \repeat volta 2 {
@@ -95,7 +95,7 @@ melody = \relative c''' {
   }}
   \break
 
-  \mark \markup { \circle { \bold ! } }
+  \mark \markup \with-color #red { \circle { \bold ! } }
   \introMelody
   \mark \markup { \ellipse { \bold Śpiew } }
   s2 |
@@ -108,7 +108,7 @@ melody = \relative c''' {
     gis16 a h cis  d cis d e | d cis d e  d c h a | h c h a  gis f gis a | h a gis f e4 |
   \break
 
-  \mark \markup { \circle { \bold ! } }
+  \mark \markup \with-color #red { \circle { \bold ! } }
   \introMelody
   \break
 
@@ -121,7 +121,7 @@ melody = \relative c''' {
   \bandMelody
   \break
 
-  \mark \markup { \circle { \bold ! } }
+  \mark \markup \with-color #red { \circle { \bold ! } }
   \introMelody
   \mark \markup { \ellipse { \bold Śpiew } }
   s2 |
@@ -131,9 +131,10 @@ melody = \relative c''' {
     h'16 c c h  a a a e | a h h a  gis gis gis e |
     gis16 a a gis  gis f f e | e f gis a  h h h e, |
     h'16 c c h  a a a8 | a16 h h a  gis gis gis8 |
+    gis16 a a gis  gis f f e |
   }
   \alternative {
-    { gis16 a a gis  gis f f e | e8 h e4 | }
+    { e8 h e4 | }
     { r8 e16 e e8 e | f4 e | \bar "|." }
   }
 }
@@ -181,7 +182,7 @@ melodyChords = \chordmode {
 
 \header{
   title = "Bešena rovena"
-  tagline = "12.03.2024"
+  tagline = "16.07.2025"
 }
 \score {
   <<
@@ -206,7 +207,7 @@ melodyChords = \chordmode {
     \null
 
     \line { Disvidani žebo mo dernani nado }
-    \line { Ah, Mo dernani nado }
+    \line { Ah, mo dernani nado }
 
     \null
 
