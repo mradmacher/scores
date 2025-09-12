@@ -26,11 +26,9 @@ ii = \relative c'' {
 
     d'16 cis h ais   h cis d eis   fis eis d cis   d cis h16 a |
     gis16 a h gis   a cis, fis cis   a' gis fis eis   fis cis fis8
+    ^\markup { \with-color #green \bold "D.S." }
 
     \bar "||"
-    \once \override Score.RehearsalMark.#'break-visibility = #begin-of-line-invisible
-    \once \override Score.RehearsalMark.#'self-alignment-X = #right
-    \mark "D.S."
   }
 }
 iiChords = \chordmode {
@@ -54,7 +52,7 @@ iii = \relative c'' {
 }
 
 iiiChords = \chordmode {
-  cis2 s8 fis8:m cis4 |
+  cis2 s2 |
   cis4 s4 s2 |
   h2:m cis2 |
 
@@ -64,11 +62,7 @@ iiiChords = \chordmode {
 }
 
 iiiRhythm = {
-  \startStaff
   g4 r8 g8~g8 g g g | g4 r4 r2
-
-  \stopStaff
-  s1 s1 s1
 }
 %******************************************************************************
 iv = \relative c'' {
@@ -79,10 +73,7 @@ iv = \relative c'' {
   }
   \alternative {
     {
-      h8 a'\prall   fis16 h a eis   fis8\prall d16 dis   dis h fis' dis |
-      \once \override Score.RehearsalMark.#'break-visibility = #begin-of-line-invisible
-      \once \override Score.RehearsalMark.#'self-alignment-X = #right
-      \mark "Fine"
+      h8 a'\prall   fis16 h a eis   fis8\prall d16 dis   dis ^\markup { \with-color #red \bold "Coda->" } h fis' dis |
     }
     { h8 a'\prall   fis16 h a eis   fis8\prall d16 dis   h4 | }
   }
@@ -153,7 +144,7 @@ vii = \relative c' {
     fis16 a cis fis   e8\prall d16 cis   cis16 fis cis fis   e8\prall d16 cis |
   } \alternative {
     { cis16 d eis fis   gis a h8\prall   a8\prall fis16 eis   fis cis cis a | }
-    { cis16 ^ "D.S. al Fine e poi al Coda" d h cis   a h gis a   fis cis eis eis   fis4 | }
+    { cis16 d h cis   a h gis a   fis cis eis8\prall  fis4 ^\markup { \with-color #green \bold "D.S." } | }
   }
 }
 viiChords = \chordmode {
@@ -167,7 +158,7 @@ viiChords = \chordmode {
 %******************************************************************************
 
 viii = \relative c'' {
-  h8 fis'\prall   dis16 eis fis dis   h8 fis'\prall   dis16 eis fis dis
+  h8 ^\markup { \with-color #red \bold "Coda" } fis'\prall  dis16 eis fis dis   h8 fis'\prall   dis16 eis fis dis |
   h8 fis'\prall   dis16 eis fis gis   a8\prall fis16 eis   fis h, dis fis |
   h8\prall ais16 h   dis h fis8   fis8\prall eis16 fis   h fis dis8 |
   dis8\prall cisis16 dis   fis d h8 ~ h4. ais8 | h4 r4 |
@@ -176,18 +167,20 @@ viiiChords = \chordmode {
   h1 |
   s1 |
   s1 |
-  s1 |
-  s1 |
-  s1 |
   h2.. fis8 |
   h2 |
 }
 
 \header {
   title = "Шира"
-  tagline = "11.09.2025"
+  tagline = "12.09.2025"
 }
 
+\paper {
+  system-system-spacing = #'(
+    (basic-distance . 11)
+  )
+}
 \score {
   <<
     \new Staff \transpose a g {
@@ -200,8 +193,8 @@ viiiChords = \chordmode {
         \new RhythmicStaff
           \with {
             \remove "Time_signature_engraver"
-            fontSize = #-3
-            \override StaffSymbol.staff-space = #0.85
+            fontSize = #-4
+            \override StaffSymbol.staff-space = #0.8
           }
           \iiiRhythm
       >>
@@ -211,8 +204,8 @@ viiiChords = \chordmode {
         \new RhythmicStaff
           \with {
             \remove "Time_signature_engraver"
-            fontSize = #-3
-            \override StaffSymbol.staff-space = #0.85
+            fontSize = #-4
+            \override StaffSymbol.staff-space = #0.8
           }
           \ivRhythm
       >>
@@ -224,8 +217,8 @@ viiiChords = \chordmode {
         \new RhythmicStaff
           \with {
             \remove "Time_signature_engraver"
-            fontSize = #-3
-            \override StaffSymbol.staff-space = #0.85
+            fontSize = #-4
+            \override StaffSymbol.staff-space = #0.8
           }
           \vRhythm
       >>
@@ -233,12 +226,8 @@ viiiChords = \chordmode {
 
       \vi \break
 
-      \once \override Score.RehearsalMark.#'break-visibility = #begin-of-line-invisible
       \vii \bar "||" \break
 
-      \once \override Score.RehearsalMark.#'break-visibility = #begin-of-line-invisible
-      \once \override Score.RehearsalMark.#'self-alignment-X = #left
-      \mark  "Coda"
       \viii
       \break
     }
