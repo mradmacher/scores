@@ -36,23 +36,42 @@ violin = \relative c''' {
   \appoggiatura { a16 h } c8 h d c~ c2 | \appoggiatura { a16 h } c8 h c e d4 c | d4 e f d | e1~ | e1\fermata |
 }
 
-pianoR = \relative c''' {
+pianoUpper = \relative c''' {
   \key a \minor
   \time 4/4
 
   c8 c, e c'  h c, e h' | a c, e a  a c, h' c, |
-  c'8 c, e c'  h c, e h' | a c, e a  h2 | \bar "|."
+  c'8 c, e c'  h c, e h' | a c, e a  h2 | \bar "|." \break
 
   c8 c, e c'  h c, e h' | a c, e a  h c, a' c, |
-  g' b, d g  b b, c' b, | a' c, e a  a c, b' c,
+  g' b, d g  b b, c' b, | a' c, e a  a c, h' c,
   c' c, e c'  h c, e h' | a c, e a  h c, a' c, |
   \time 2/4
   g' b, g'16 b, d b' | a8 c, e a | g b, d b' |
   \time 4/4
-  a c, b' c, c' c, b' c, |
+  a c, b' c, c' c, b' c, | \break
+
+  a' a, c e  a a, c e | a a, c e  a a, g' a, |
+  g' g, h e  g g, h e | g g, h e  g g, e' g, |
+  \time 2/4
+  d' f, d'16 f, a f' | e8 g, h e | d f, a f' |
+  \time 4/4
+  e h g' h, a' h, h' h, | \break
+
+  c'8 c, e c'  h c, e h' | a c, e a  h c, a' c, |
+  h' h, e h' a h, e a | g h, e g a h, g' h, |
+  f' a, d f  g a, d g | a d, f a  h d, c' d, |
+  d' d, e d' c d, e c' | h d, e c' h4. a16 h |
+
+  c8 d, f c'  h d, e h' |  a c, e a  h c, c' c, |
+  d' d, f d'  c d, f c' |  h d, e c' h4. a16 h |
+  c8 c, f g  a4. g16 f | a8 d, a' c  h a h gis | a8 c, e a  c4. h16 a |
+  c8 c, f g  a4. g16 f | a8 d, a' c  h a h gis | a8 c, e a  c4. h16 a |
+  c8 c, f g  a4. g16 f | a8 d, a' c  h e, c' e, |
+  d' e, c' e,  d' e, f' e, | <c, e a c>1 \arpeggio \fermata \bar "|."
 }
 
-pianoL = \relative c {
+pianoLower = \relative c {
   \clef bass
   \time 4/4
 
@@ -67,19 +86,42 @@ pianoL = \relative c {
   \time 4/4
   a,4 a' e a |
 
-}
-\header {
-  title = "Złamane skrzydło motyla"
-  tagline = "Czarny motyl"
-}
-\score {
-  \new Staff \violin
+  a,4. a'8 e4 a | a,4. a'8 e4 a |
+  e,4. e'8 h4 e | e,4. e'8 h4 e |
+  \time 2/4
+  d,4 d' | e, e' | d, d' |
+  \time 4/4
+  e,4 e' h e |
+
+  a,4. a'8 e4 a | a,4. a'8 e4 a |
+  e,4. e'8 h4 e | e,4. e'8 h4 e |
+  d,4. d'8 a4 d | d,4. d'8 a4 d |
+  e,4. e'8 h4 e | e,4. e'8 h4 e |
+
+  d,4. d'8 e,4 e' | a,4. a'8 e4 a |
+  d,,4. d'8 a4 d | e,4. e'8 h2 |
+
+  f4. f'8 c4 f | d,4. d'8 e,4 e' | a,4. a'8 e4 a |
+  f,4. f'8 c4 f | d,4. d'8 e,4 e' | a,4. a'8 e4 a |
+  f,4. f'8 c4 f | d,4. d'8 e,4 e' |
+  h e h e | <a, c e a>1 \arpeggio |
 }
 
-%\score {
-%  \new PianoStaff
-%    <<
-%      \new Staff \pianoR
-%      \new Staff \pianoL
-%    >>
-%}
+\header {
+  title = "Złamane skrzydło motyla"
+  tagline = "Czarny motyl, 14.10.2025"
+}
+
+\score {
+  \new PianoStaff \with { instrumentName = "Piano" }
+    <<
+      \set PianoStaff.connectArpeggios = ##t
+      \new Staff \pianoUpper
+      \new Staff \pianoLower
+    >>
+}
+
+\pageBreak
+\score {
+  \new Staff \with { instrumentName = "Violin" } \violin
+}
