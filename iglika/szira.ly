@@ -2,11 +2,13 @@
 \include "deutsch.ly"
 
 i = \relative c''{
-  ais16 h fis' h,   ais h fis' h,   gis a e' a,   gis a e' e, |
-  a8 fis16 eis   fis a cis cis,   a'8 fis16 eis   fis cis gis' a |
+  \repeat volta 2 {
+    ais16 h fis' h,   ais h fis' h,   gis a e' a,   gis a e' e, |
+    a16 gis fis eis   fis a cis cis,   a' gis fis eis   fis cis gis' a |
 
-  ais16 h fis' h,   ais h fis' h,   gis a e' a,   gis a e' e, |
-  a8 fis16 eis   fis a cis cis,   a'8 fis16 eis   fis cis fis8 |
+    ais16 h fis' h,   ais h fis' h,   gis a e' a,   gis a e' e, |
+    a16 gis fis eis   fis a cis cis,   a' gis fis16 eis   fis cis fis8 |
+  }
 }
 
 iChords = \chordmode {
@@ -17,17 +19,17 @@ iChords = \chordmode {
 }
 
 %******************************************************************************
-iiPartI = \relative c'' {
-  d8 h16 ais   h cis d eis   fis8 d16 cis   d8 h16 a |
-}
-iiPartII = \relative c'' {
-  gis16 a ais h   a8 fis16 cis'   a8 fis16 eis   fis a cis fis,|
-}
-iiPartIII = \relative c'' {
-  gis16 a h gis   a cis, fis cis   a'8 fis16 eis   fis cis fis8
-}
-ii = {
-  \iiPartI \iiPartII \iiPartI \iiPartIII
+ii = \relative c'' {
+  \repeat volta 2 {
+    d16 cis h ais   h cis d eis   fis eis d cis   d cis h16 a |
+    gis16 a ais h   a gis fis16 cis'   a gis fis16 eis   fis a cis fis,|
+
+    d'16 cis h ais   h cis d eis   fis eis d cis   d cis h16 a |
+    gis16 a h gis   a cis, fis cis   a' gis fis eis   fis cis fis8
+    ^\markup { \with-color #green \bold "D.S." }
+
+    \bar "||"
+  }
 }
 iiChords = \chordmode {
   h2:m s2 |
@@ -35,68 +37,69 @@ iiChords = \chordmode {
   h2:m s2 |
   cis4 fis4:m cis4 fis4:m |
 }
+
 %******************************************************************************
-iii =  \relative c'' {
-  cis16 d eis fis   gis8 gis8   gis16 cis a fis   gis8 gis16 cis, |
-  gis'16 a ais h   a8 fis16 gis   fis8 d16 eis   d8 h16 cis |
-  d8 h16 a   gis fis eis d   cis d eis fis   gis8 gis16 cis, |
+iii = \relative c'' {
+  \repeat volta 2 {
+    cis16 d eis fis   gis8 gis16 gis   gis16 cis a fis   gis gis gis cis, |
+    gis'16 a ais h   a gis fis gis   fis eis d16 eis   d cis h16 cis |
+    d cis h16 a   gis fis eis d   cis d eis fis   gis gis gis16 cis, |
+  }
+  \alternative {
+    { eis'16 d d h   cis cis gis' gis,  eis'16 d d h  cis16 cis cis gis | }
+    { gis16 a h cis   d cis h16 gis'  fis eis d h  cis4 | \bar "||" }
+  }
 }
-iiiVoltaI = \relative c'' {
-  eis16 d d h   cis8 gis'   fis8 d   cis16 gis cis gis |
-}
-iiiVoltaII = \relative c'' {
-  gis16 a h cis   d8 h16 gis'   fis8 d   cis4 |
-}
+
 iiiChords = \chordmode {
-  cis2 s8 fis8:m cis4 |
+  cis2 s2 |
   cis4 s4 s2 |
   h2:m cis2 |
-}
-iiiVoltaIChords = \chordmode {
+
   h4:m cis4 h4:m cis4 |
-}
-iiiVoltaIIChords = \chordmode {
+
   cis4 h4:m s4 cis4 |
 }
+
+iiiRhythm = {
+  g4 r8 g8~g8 g g g | g4 r4 r2
+}
 %******************************************************************************
-ivPartI = \relative c'' {
-  h8 fis'8    dis16 eis fis dis   h8 fis'8   dis16 eis fis dis |
-}
-ivPartII = \relative c'' {
-  h8 fis'8   dis16 eis fis gis   a8 fis   dis16 eis fis dis |
-}
-iv = {
-  \ivPartI \ivPartII \ivPartI
-}
-ivVoltaI = \relative c'' {
-  h8 a'   fis16 h a fis   fis8 d16 dis   dis h fis' dis |
-}
-ivVoltaII = \relative c'' {
-  h8 a'   fis16 h a fis   fis8 d16 dis   h4 |
+iv = \relative c'' {
+  \repeat volta 2 {
+    h8 fis'8\prall    dis16 eis fis dis   h8 fis'8\prall   dis16 eis fis dis |
+    h8 fis'8\prall   dis16 eis fis gis   a8\prall fis\prall   dis16 eis fis dis |
+    h8 fis'8\prall    dis16 eis fis dis   h8 fis'8\prall   dis16 eis fis dis |
+  }
+  \alternative {
+    {
+      h8 a'\prall   fis16 h a eis   fis8\prall d16 dis   dis ^\markup { \with-color #red \bold "Coda->" } h fis' dis |
+    }
+    { h8 a'\prall   fis16 h a eis   fis8\prall d16 dis   h4 | }
+  }
 }
 ivChords = \chordmode {
   h4 s4 s2 |
   s1 |
   s1 |
-}
-ivVoltaIChords = \chordmode {
+
+  s1 |
   s1 |
 }
-ivVoltaIIChords = \chordmode {
-  s1 |
+ivRhythm = {
+  g4 r4 g4 r4 | g4 r4 g4 r4 | g4 r4 g4 r4 | g4 r4 r8 g8 g4 |
+  %g8 g g g r8 g8 g8 g8 | g8 g g g r8 g8 g8 g8 | g8 g g g r8 g8 g8 g8 | g8 g g g r8 g8 g4 |
+  g8 g g g r8 g8 g4 |
 }
 %******************************************************************************
-vPartI = \relative c'' {
-  ais8 h   h, h'16 h,   a'8 fis16 eis   fis h, dis fis |
-}
-vPartII = \relative c'' {
-  ais8 h   fis h   ais16 h d dis   gis8 fis |
-}
-vPartIII = \relative c'' {
-  gis16 eis fis h,   h'16 a gis fis   eis8 d16 dis  h4 |
-}
-v = {
-  \vPartI \vPartII \vPartI \vPartIII
+v = \relative c'' {
+  \repeat volta 2 {
+    ais8 h   h, h'16 h,   a'8\prall fis16 eis   fis h, dis fis |
+    ais8 h   fis h   ais16 h d dis   gis8\prall fis |
+
+    ais8 h   h, h'16 h,   a'8\prall fis16 eis   fis h, dis fis |
+    gis16 eis fis h,   h'16 a gis fis   eis8\prall d16 dis  h4 |
+  }
 }
 
 vChords = \chordmode {
@@ -105,178 +108,142 @@ vChords = \chordmode {
   s1 |
   s1 |
 }
+vRhythm = {
+  g8 g4 g8 g4 g4 | g8 g4 g8~g g g g |
+  g8 g4 g8 g4 g4 | g8 g4 r8 r g g4 |
+}
+
 %******************************************************************************
-viPartI = \relative c'' {
-  e16 dis e a   as g g e   e e his cis   cis a e' a, |
-}
-viPartII = \relative c'' {
-  dis16 e a as   g g e dis   e e his cis   a cis e a, |
-}
-viPartIII = \relative c'' {
-  cis16 d cis d   g g e dis   e e his cis   a cis e a, |
-}
-viPartIV = \relative c''' {
-  gis16 a dis dis   c c a a   as g g e    e e his cis |
-  fis16 dis e a,   a' g g e   e e his cis a4 |
-}
-vi = {
-  \viPartI \viPartII
-}
-viVoltaI = {
-  \viPartI \viPartIII
-}
-viVoltaII = {
-  \viPartIV
+vi = \relative c'' {
+  \repeat volta 2 {
+    e16 dis e a   as as g fis   e e his cis   cis a e' a, |
+    dis16 e a as   g fis e dis   e e his cis   a cis e a, |
+  } \alternative {
+    {
+      e'16 dis e a   as as g fis   e e his cis   cis a e' a, |
+      cis16 d cis d   g g e dis   e e his cis   a cis e a, |
+    }
+    {
+      gis'16 a dis dis   c c a a   as as g e    e e his cis |
+      fis16 dis e a,   a' g g e   e e his cis a4 |
+    }
+  }
 }
 viChords = \chordmode {
   a2 s2 |
   s1 |
-}
-viVoltaIChords = \chordmode {
-  s1 |
-  s1 |
-}
-viVoltaIIChords = \chordmode {
-  s1 |
-  s1 |
+
+  s1 | s1 |
+  s1 | s1 |
 }
 %******************************************************************************
-viiPartI = \relative c' {
-  fis16 a cis fis   e8 d16 cis   cis16 fis cis fis   e8 d16 cis |
-}
-viiPartII = \relative c'' {
-  cis16 fis cis fis   h a a eis   fis8 fis16 fis,   e' d cis h |
-}
-vii = {
-  \viiPartI \viiPartII \viiPartI
-}
-viiVoltaI = \relative c'' {
-  cis16 d eis fis   gis a h8   a8 fis16 eis   fis cis a cis |
-}
-viiVoltaII = \relative c'' {
-  cis16 ^ "D.S. al Fine e poi al Coda" d h cis   a h gis a   fis cis eis8   fis4 |
+vii = \relative c' {
+  \repeat volta 2 {
+    fis16 a cis fis   e8\prall d16 cis   cis16 fis cis fis   e8\prall d16 cis |
+    cis16 fis cis fis   h a a eis   fis fis fis fis,   e' d cis h |
+    fis16 a cis fis   e8\prall d16 cis   cis16 fis cis fis   e8\prall d16 cis |
+  } \alternative {
+    { cis16 d eis fis   gis a h8\prall   a8\prall fis16 eis   fis cis cis a | }
+    { cis16 d h cis   a h gis a   fis cis eis8\prall  fis4 ^\markup { \with-color #green \bold "D.S." } | }
+  }
 }
 viiChords = \chordmode {
   fis2:m s2 |
   s1 |
   s1 |
-}
-viiVoltaIChords = \chordmode {
+
   cis2 fis2:m |
-}
-viiVoltaIIChords = \chordmode {
-  cis2. fis4:m |
+  cis2 fis2:m |
 }
 %******************************************************************************
 
 viii = \relative c'' {
-  h8 fis'   dis16 eis fis dis   h8 fis'   dis16 eis fis dis
-  h8 fis'   dis16 eis fis gis   a8 fis16 eis   fis h, dis fis |
-  h8 ais16 h   dis h fis8   fis8 eis16 fis   h fis dis8 |
-  dis8 cisis16 dis   fis d h8 ~ h4. ais8 | h4 r4 r2 |
+  h8 ^\markup { \with-color #red \bold "Coda" } fis'\prall  dis16 eis fis dis   h8 fis'\prall   dis16 eis fis dis |
+  h8 fis'\prall   dis16 eis fis gis   a8\prall fis16 eis   fis h, dis fis |
+  h8\prall ais16 h   dis h fis8   fis8\prall eis16 fis   h fis dis8 |
+  dis8\prall cisis16 dis   fis d h8 ~ h4. ais8 | h4 r4 |
 }
 viiiChords = \chordmode {
-  h2 s2 |
-  s1 |
-  s1 |
-  s1 |
-  s1 |
+  h1 |
   s1 |
   s1 |
   h2.. fis8 |
-  h2 s2 |
+  h2 |
 }
 
-sziraMelody =  {
-  \key fis \minor
-
-  \repeat volta 2 { \i }
-  \break
-
-  \repeat volta 2 {
-    \ii
-    \bar "||"
-    \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-    \once \override Score.RehearsalMark #'self-alignment-X = #right
-    \mark "D.S."
-  }
-  \break
-
-  \repeat volta 2 {
-    \iii
-  } \alternative {
-    { \iiiVoltaI }
-    {
-      \iiiVoltaII
-      \bar "||"
-      \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-      \once \override Score.RehearsalMark #'self-alignment-X = #right
-      \mark "Fine"
-  }
-  }
-  \break
-
-  \repeat volta 2 {
-    \iv
-  } \alternative {
-    { \ivVoltaI } { \ivVoltaII }
-    \bar "||"
-  }
-  \break
-
-  \repeat volta 2 {
-    \v
-  }
-  \break
-
-  \repeat volta 2 {
-    \vi
-  } \alternative {
-    { \viVoltaI } { \viVoltaII }
-  }
-  \break
-
-  \repeat volta 2 {
-    \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-    \vii
-  } \alternative {
-    { \viiVoltaI }
-    {
-      \viiVoltaII
-      \bar "||"
-    }
-  }
-  \break
-
-  %\once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-  \once \override Score.RehearsalMark #'self-alignment-X = #left
-  \mark  "Coda"
-  \iv \ivVoltaI
-  \viii
-  \break
-
+\header {
+  title = "Шира"
+  tagline = "12.09.2025"
 }
 
-sziraChords = {
-  \germanChords
-  \set chordNameLowercaseMinor = ##t
-  \set chordChanges = ##t
-
-  \iChords
-  \iiChords
-  \iiiChords \iiiVoltaIChords \iiiVoltaIIChords
-  \ivChords \ivVoltaIChords \ivVoltaIIChords
-  \vChords
-  \viChords \viVoltaIChords \viVoltaIIChords
-  \viiChords \viiVoltaIChords \viiVoltaIIChords
-  \viiiChords
-
+\paper {
+  system-system-spacing = #'(
+    (basic-distance . 11)
+  )
 }
-\header { title = "Шира"}
 \score {
   <<
-    \new Staff \transpose a g \sziraMelody
-    \new ChordNames \transpose a g \sziraChords
+    \new Staff \transpose a g {
+      \key fis \minor
+      \time 2/4
+      \i \break
+      \ii \break
+      <<
+        \iii
+        \new RhythmicStaff
+          \with {
+            \remove "Time_signature_engraver"
+            fontSize = #-4
+            \override StaffSymbol.staff-space = #0.8
+          }
+          \iiiRhythm
+      >>
+
+      <<
+        \iv
+        \new RhythmicStaff
+          \with {
+            \remove "Time_signature_engraver"
+            fontSize = #-4
+            \override StaffSymbol.staff-space = #0.8
+          }
+          \ivRhythm
+      >>
+
+      \bar "||" \break
+
+      <<
+        \v
+        \new RhythmicStaff
+          \with {
+            \remove "Time_signature_engraver"
+            fontSize = #-4
+            \override StaffSymbol.staff-space = #0.8
+          }
+          \vRhythm
+      >>
+      \break
+
+      \vi \break
+
+      \vii \bar "||" \break
+
+      \viii
+      \break
+    }
+    \new ChordNames \transpose a g {
+      \germanChords
+      \set chordNameLowercaseMinor = ##t
+      \set chordChanges = ##t
+
+      \iChords
+      \iiChords
+      \iiiChords
+      \ivChords
+      \vChords
+      \viChords
+      \viiChords
+      \viiiChords
+    }
   >>
-  \layout{}
 }
