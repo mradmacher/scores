@@ -70,12 +70,12 @@ melody = \relative c''' {
   \bandMelody
   \break
 
-  \mark \markup \with-color #red { \circle { \bold ! } }
   \introMelody
-  \mark \markup { \ellipse { \bold Śpiew } }
+  \mark \markup \with-color #green { \ellipse { \bold Śpiew } }
   s2
   \break
 
+  \mark \markup \with-color #red { \circle { \bold ! } }
   \repeat volta 2 {
     h16 c c h  a a a e | a h h a  gis gis gis e |
     gis16 a a gis  gis f f e | e f gis a  h h h e, |
@@ -95,12 +95,12 @@ melody = \relative c''' {
   }}
   \break
 
-  \mark \markup \with-color #red { \circle { \bold ! } }
   \introMelody
-  \mark \markup { \ellipse { \bold Śpiew } }
+  \mark \markup \with-color #green { \ellipse { \bold Śpiew } }
   s2 |
   \break
 
+  \mark \markup \with-color #red { \circle { \bold ! } }
   d16 e e e e8 e | gis8 a h16 h h e, | h'16 d c h  a c h a | gis a gis f e e e8 |
   d16 e e e e8 e | gis8 a h16 cis d e | d cis d e  d c h a | h c c h h4 |
   \break
@@ -108,25 +108,25 @@ melody = \relative c''' {
     gis16 a h cis  d cis d e | d cis d e  d c h a | h c h a  gis f gis a | h a gis f e4 |
   \break
 
-  \mark \markup \with-color #red { \circle { \bold ! } }
   \introMelody
   \break
 
-  \mark \markup { \ellipse { \bold Solo } }
+  \mark \markup \with-color #blue { \ellipse { \bold Solo } }
   \repeat volta 4 {
     \introMelody
   }
   \break
 
+  \mark \markup \with-color #red { \circle { \bold ! } }
   \bandMelody
   \break
 
-  \mark \markup \with-color #red { \circle { \bold ! } }
   \introMelody
-  \mark \markup { \ellipse { \bold Śpiew } }
+  \mark \markup \with-color #green { \ellipse { \bold Śpiew } }
   s2 |
   \break
 
+  \mark \markup \with-color #red { \circle { \bold ! } }
   \repeat volta 2 {
     h'16 c c h  a a a e | a h h a  gis gis gis e |
     gis16 a a gis  gis f f e | e f gis a  h h h e, |
@@ -146,11 +146,11 @@ melodyChords = \chordmode {
 
   \bandChords
 
-  a2:m | e2 | d2:m | e2 |
-  a2:m | e2 | d2:m | e2 |
-
   \introChords
   s2
+
+  a2:m | e2 | d2:m | e2 |
+  a2:m | e2 | d2:m | e2 |
 
   c2 | d2:m | e2 | a2:m |
   e2 | e2 | d2:m |
@@ -182,7 +182,7 @@ melodyChords = \chordmode {
 
 \header{
   title = "Bešena rovena"
-  tagline = "16.07.2025"
+  tagline = "22.10.2025"
 }
 \score {
   <<
@@ -193,7 +193,7 @@ melodyChords = \chordmode {
 \score {
   <<
     \new Staff
-      \mark \markup { \ellipse { \bold Śpiew } }
+      \mark \markup \with-color #green { \ellipse { \bold Śpiew } }
       \transpose a g \vocalMelody
     \new ChordNames \transpose a g \vocalChords
   >>
