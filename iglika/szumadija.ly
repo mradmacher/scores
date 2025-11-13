@@ -32,22 +32,22 @@ melody = \relative c'' {
 harmonies = \chords {
   \germanChords
   \set chordNameLowercaseMinor = ##t
-  \set chordChanges = ##t
+  %\set chordChanges = ##t
 
-  c2 | c2 | c2 | g2 | c2 | g2 | d4:dim c4 |
+  c2 | s2 | s2 | g2 | c2 | g2 | f4:m c4 |
   g2 |
   g2 |
 
-  d4:dim c | g2 | d4:dim c | g2 | d4:dim c | g2 | d4:dim c | g2 |
+  f4:m c | g2 | f4:m c | g2 | f4:m c | g2 | f4:m c | g2 |
 
-  g2 | g2 | d2:dim | g2 | g2 | g2 | d2:dim |
+  g2 | s2 | f2:m | g2 | s2 | s2 | f2:m |
   g2 |
   g2 |
 }
 
 \header {
   title = "Šumadija"
-  tagline = "05.11.2025"
+  tagline = "13.11.2025"
 }
 \score {
   <<
