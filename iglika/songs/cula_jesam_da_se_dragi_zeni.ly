@@ -17,8 +17,9 @@ melody = \relative c'{
   fis'4 h fis h | a8 g fis e fis4. d8 | e8 d cis4 h2 | \bar "|." \break
 
   \mark \markup \with-color #green { \musicglyph "scripts.segno" }
-  fis'8 h a g fis e d4 | g8 g fis e d cis h4 | e16 dis e fis g fis e fis e d cis d e d cis d | cis8 h4 ais8 h2 |
-  \bar "|."
+  \repeat volta 2 {
+    fis'8 h a g fis e d4 | g8 g fis e d cis h4 | e16 dis e fis g fis e fis e d cis d e d cis d | cis8 h4 ais8 h2 |
+  }
 
   \mark \markup { "Śpiew" }
   fis'4 h fis h |
