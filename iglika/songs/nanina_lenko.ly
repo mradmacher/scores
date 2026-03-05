@@ -14,10 +14,10 @@ instrumental = \relative c'' {
   \break
 
   \repeat volta 2 {
-    <g b>8 <g b>16 <fis a>16 <a c> <g b> <es g> | <fis a>8 <fis a>16 <es g> <d fis> <es g> <g b> |
-    <fis a>8 <fis a>16 <es g> <g b> <fis a> <es g> | <d fis>8 <c es>16 <d fis> <es g> <fis a> <a c> |
-    <g b>8 <g b>16 <fis a>16 <a c> <g b> <es g> | <fis a>8 <fis a>16 <es g> <d fis> <es g> <g b> |
-    <fis a>8 <es g>16 <d fis> <c es> <d fis> <es g> | <d fis>16 <d fis> <d fis> <a d> <d fis>8. |
+    <g b>8 <g b>16 <fis a>16 <a c> <g b> <es g> | <fis a>8 <es g>16 <d fis> <d fis> <es g> <g b> |
+    <fis a>8 <es g>16 <d fis> <g b> <fis a> <es g> | <d fis>16 <c es> <d fis> <es g> <fis a> <g b> <a c> |
+    <g b>8 <g b>16 <fis a>16 <a c> <g b> <es g> | <fis a>8 <es g>16 <d fis> <d fis> <es g> <g b> |
+    <fis a>8 <es g>16 <d fis> <c es> <d fis> <es g> | <d fis>8 <a d> <d fis>8. |
   }
 }
 
@@ -29,8 +29,8 @@ instrumentalChords = \chordmode {
   d4.. | g4..:m | c4..:m | d4.. |
   d4.. | g4..:m | c4..:m | d4.. |
 
-  g4..:m |d4.. | c4..:m | d4.. |
-  g4..:m |d4.. | c4..:m | d4.. |
+  g4..:m | es4.. | c4..:m | d4.. |
+  g4..:m | es4.. | c4..:m | d4.. |
 }
 
 vocal = \relative c' {
@@ -52,14 +52,15 @@ vocalChords = \chordmode {
 
   d4 s8. | s4 s8. | c4:m s8. | d4 s8. |
   d4 s8. | s4 s8. | c4:m s8. | d4 s8. |
-  g4:m s8. | c4:m s8. | d4 s8. | s4 s8. |
-  g4:m s8. | c4:m s8. | d4 s8. | s4 s8. |
+
+  g4..:m | es4.. | c4..:m | d4.. |
+  g4..:m | es4.. | c4..:m | d4.. |
 }
 
 \header {
   title = "Нанина Ленко"
   composer = Bułgaria
-  tagline = "04.03.2026"
+  tagline = "05.03.2026"
 }
 
 \score {
