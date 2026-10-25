@@ -1,7 +1,7 @@
 \bookpart {
   \header {
     title = "Hej na szutoskiem polu"
-    composer = "Composer Name"
+    composer = ""
     tagline = ##f
   }
 
@@ -21,10 +21,10 @@
       }
       \new Lyrics \lyricsto "melody" {
         \lyricmode {
-          Hej na Szu -- to -- skiem po -- lu
-          Hej bły -- szczy sie ko -- ro -- na
-          Hej wszy -- stkie Sło -- to -- wian -- ki
-          Hej war -- ta -- jo pie -- ro -- na!
+          Hej na szu -- to -- skiem po -- lu
+          hej bły -- szczy sie ko -- ro -- na
+          hej wszy -- stkie Sło -- to -- wian -- ki
+          hej war -- ta -- jo pie -- ro -- na!
         }
       }
     >>
@@ -35,16 +35,16 @@
     \fill-line {
       \null
       \column {
-        \line { Hej na Szutoskiem polu }
-        \line { Hej błyszczy sie korona }
-        \line { Hej wszystkie Słotowianki }
-        \line { Hej wartajo pierona! }
+        \line { Hej na szutoskiem polu }
+        \line { hej błyszczy sie korona }
+        \line { hej wszystkie Słotowianki }
+        \line { hej wartajo pierona! }
 
         \null
 
         \line { Hej żebym jo umiała }
-        \line { Hej to bym jo śpiwała }
-        \line { Jakżeby sie po lesie }
+        \line { hej to bym jo śpiwała }
+        \line { jakżeby sie po lesie }
         \line { Melodia radowała! }
       }
       \null

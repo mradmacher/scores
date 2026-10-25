@@ -8,13 +8,12 @@
   left-margin = 20
   right-margin = 20
   indent = 0
-  ragged-last-bottom = ##f
-  print-page-number = ##f
+  print-page-number = ##t
   % skip-first-staff = ##f
   % Ensure enough space for multiple verses
   % Ensure page breaks happen naturally between songs
   % ragged-bottom = ##f
-  ragged-last-bottom = ##t
+  % ragged-last-bottom = ##t
 
   % Cover page settings
   oddHeaderMarkup = \markup {}
@@ -98,6 +97,8 @@
     \pageBreak
   }
 
+  \include "szumiala_leszczyna.ly"
+  \pageBreak
   \include "hej_na_szutoskiem_polu.ly"
   \pageBreak
 }
