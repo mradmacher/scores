@@ -8,33 +8,24 @@
   left-margin = 20
   right-margin = 20
   indent = 0
-  print-page-number = ##t
+  print-page-number = ##f
+  print-first-page-number = ##f
   % skip-first-staff = ##f
-  % Ensure enough space for multiple verses
-  % Ensure page breaks happen naturally between songs
-  % ragged-bottom = ##f
-  % ragged-last-bottom = ##t
+  ragged-bottom = ##f
+  ragged-last-bottom = ##t
 
-  % Cover page settings
   oddHeaderMarkup = \markup {}
-  evenHeaderMarkup = \markup {}
-  % oddFooterMarkup = \markup {}
   evenFooterMarkup = \markup {}
 
   oddFooterMarkup = \markup {
-    \column {
-      \fill-line {
-        %% Copyright header field only on book first page.
-        \if \on-first-page \fromproperty #'header:copyright
-      }
-      \fill-line {
-        %% Part tagline header field only on each part last page.
-        \if \on-last-page-of-part \fromproperty #'header:parttagline
-      }
-      \fill-line {
-        %% Tagline header field only on book last page.
-        \if \on-last-page \fromproperty #'header:tagline
-      }
+    \fill-line {
+      \unless \on-first-page \fromproperty #'page:page-number-string
+    }
+  }
+
+  evenFooterMarkup = \markup {
+    \fill-line {
+      \fromproperty #'page:page-number-string
     }
   }
 }
@@ -44,9 +35,6 @@
   % ==================== COVER PAGE ====================
   \bookpart {
     \header {
-      %title = "Pieśni ludowe z Pilzna i okolic"
-      copyright = "Wszystkie prawa zastrzeżone"
-      parttagline = "Listopad 2026"
     }
 
     \markup {
@@ -60,6 +48,9 @@
           \line { \fontsize #12 { \bold "i okolic" } }
           \vspace #10
           \line { \large "zebrali Małgorzata i Łukasz Chorążakowie" }
+          \vspace #20
+          \line { "Wszystkie prawa zastrzeżone" }
+          \line { "Listopad 2026" }
         }
         \null
       }
@@ -88,9 +79,9 @@
       \null
       \null
       \column {
-        \line { "2" }
         \line { "3" }
         \line { "4" }
+        \line { "5" }
       }
     }
 
@@ -102,11 +93,3 @@
   \include "hej_na_szutoskiem_polu.ly"
   \pageBreak
 }
-
-%\layout {
-%  % Optional: Add a small gap between verses if they look too crowded
-%  \context {
-%    \Lyrics
-%    \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.minimum-distance = #4
-%  }
-%}
