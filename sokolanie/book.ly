@@ -75,6 +75,7 @@
         \line { \bold "Szumiała leszczyna" }
         \line { \bold "Hej na szutoskiem polu" }
         \line { \bold "Pobiły mie Parkoszanie" }
+        \line { \bold "Leć głosie po rosie" }
       }
       \null
       \null
@@ -82,6 +83,7 @@
         \line { "3" }
         \line { "4" }
         \line { "5" }
+        \line { "6" }
       }
     }
 
@@ -91,5 +93,6 @@
   \include "szumiala_leszczyna.ly"
   \include "hej_na_szutoskiem_polu.ly"
   \include "pobili_mnie_parkoszanie.ly"
+  \include "lec_glosie_po_rosie.ly"
 
 }
