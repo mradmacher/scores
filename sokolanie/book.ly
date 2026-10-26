@@ -76,6 +76,7 @@
         \line { \bold "Hej na szutoskiem polu" }
         \line { \bold "Pobiły mie Parkoszanie" }
         \line { \bold "Leć głosie po rosie" }
+        \line { \bold "Szumi woda i wali" }
       }
       \null
       \null
@@ -84,6 +85,7 @@
         \line { "4" }
         \line { "5" }
         \line { "6" }
+        \line { "7" }
       }
     }
 
@@ -94,5 +96,6 @@
   \include "hej_na_szutoskiem_polu.ly"
   \include "pobili_mnie_parkoszanie.ly"
   \include "lec_glosie_po_rosie.ly"
+  \include "szumi_woda_i_wali.ly"
 
 }
