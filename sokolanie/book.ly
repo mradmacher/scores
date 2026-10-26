@@ -89,7 +89,7 @@
   }
 
   \include "szumiala_leszczyna.ly"
-  \pageBreak
   \include "hej_na_szutoskiem_polu.ly"
-  \pageBreak
+  \include "pobili_mnie_parkoszanie.ly"
+
 }

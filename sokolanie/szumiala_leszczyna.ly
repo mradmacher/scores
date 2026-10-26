@@ -21,8 +21,8 @@
       \new Lyrics \lyricsto "melody" {
         \lyricmode {
           Szu -- mia -- ła lesz -- czy -- na
-          kie -- dy przez nią je -- choł
-          pła -- ka -- ła dziew -- czy -- na bym jej nie od -- je -- choł
+          kie -- dy przez nią je -- choł,
+          pła -- ka -- ła dziew -- czy -- na bym jej nie od -- je -- choł.
         }
       }
     >>
