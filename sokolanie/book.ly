@@ -3,16 +3,16 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20
-  bottom-margin = 20
-  left-margin = 20
-  right-margin = 20
+  top-margin = 18
+  bottom-margin = 18
+  left-margin = 18
+  right-margin = 18
   indent = 0
   print-page-number = ##f
   print-first-page-number = ##f
-  % skip-first-staff = ##f
-  ragged-bottom = ##f
+  ragged-bottom = ##t
   ragged-last-bottom = ##t
+  print-all-headers = ##t
 
   oddHeaderMarkup = \markup {}
   evenFooterMarkup = \markup {}
@@ -70,7 +70,6 @@
     }
 
     \markup {
-      \vspace #2
       \column {
         \line { \bold "Szumiała leszczyna" }
         \line { \bold "Hej na szutoskiem polu" }
@@ -78,24 +77,22 @@
         \line { \bold "Leć głosie po rosie" }
         \line { \bold "Szumi woda i wali" }
       }
-      \null
-      \null
-      \column {
-        \line { "3" }
-        \line { "4" }
-        \line { "5" }
-        \line { "6" }
-        \line { "7" }
-      }
     }
 
     \pageBreak
   }
 
-  \include "szumiala_leszczyna.ly"
-  \include "hej_na_szutoskiem_polu.ly"
-  \include "pobili_mnie_parkoszanie.ly"
-  \include "lec_glosie_po_rosie.ly"
-  \include "szumi_woda_i_wali.ly"
+  \bookpart {
+    \include "szumiala_leszczyna.ly"
+    %\markup { \vspace #2 }
+    \pageBreak
+    \include "hej_na_szutoskiem_polu.ly"
+    \pageBreak
+    \include "pobili_mnie_parkoszanie.ly"
+    \pageBreak
+    \include "lec_glosie_po_rosie.ly"
+    \pageBreak
+    \include "szumi_woda_i_wali.ly"
+  }
 
 }
