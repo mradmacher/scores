@@ -84,14 +84,13 @@
 
   \bookpart {
     \include "szumiala_leszczyna.ly"
-    %\markup { \vspace #2 }
-    \pageBreak
+    \markup { \vspace #2 }
     \include "hej_na_szutoskiem_polu.ly"
-    \pageBreak
+    \markup { \vspace #2 }
     \include "pobili_mnie_parkoszanie.ly"
-    \pageBreak
+    \markup { \vspace #2 }
     \include "lec_glosie_po_rosie.ly"
-    \pageBreak
+    \markup { \vspace #2 }
     \include "szumi_woda_i_wali.ly"
   }
 

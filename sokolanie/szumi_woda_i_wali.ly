@@ -29,7 +29,8 @@
 
 \markup {
   \fill-line {
-    \left-column {
+    \null
+    \column {
       \line { Szumi woda i wali. }
       \line { |: Szumi woda i wali }
       \line { i wali i wali, }
@@ -41,13 +42,14 @@
       \line { |: Chodź dziewczyno chodź sama, }
       \line { chodź sama, }
       \line { do stodoły do siana. :| }
+    }
 
-      \null
-
+    \column {
       \line { A co mamcia mi powie? }
       \line { |: A ty mamie tak powiedz, }
       \line { tak powiedz, tak powiedz, }
       \line { żeś chodziła na spowiedź. :| }
     }
+    \null
   }
 }

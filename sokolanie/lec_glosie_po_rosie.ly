@@ -26,7 +26,8 @@
 
 \markup {
   \fill-line {
-    \left-column {
+    \null
+    \column {
       \line { Leć głosie po rosie }
       \line { prosto ku dworowi. }
       \line { |: Powiedz dobry wieczór }
@@ -45,9 +46,9 @@
       \line { mego ojca pole, }
       \line { |: ale jeszcze dalej }
       \line { jest kochanie moje. :| }
+    }
 
-      \null
-
+    \column {
       \line { Idź głosie po rosie }
       \line { prosto ku dworowi. }
       \line { |: Powiedz dobranocke }
@@ -60,5 +61,6 @@
       \line { |: Usłyszysz Jasieńku }
       \line { ale mie nie poznasz. :| }
     }
+    \null
   }
 }

@@ -7,7 +7,6 @@
   <<
     \new Voice = "melody" {
       \relative c' {
-        \key f \major
         \time 3/8
         \autoBeamOff
 
@@ -30,18 +29,20 @@
 
 \markup {
   \fill-line {
-    \left-column {
+    \null
+    \column {
       \line { Hej na szutoskiem polu }
       \line { hej błyszczy sie korona }
       \line { hej wszystkie Słotowianki }
       \line { hej wartajo pierona! }
+    }
 
-      \null
-
+    \column {
       \line { Hej żebym jo umiała }
       \line { hej to bym jo śpiwała }
       \line { jakżeby sie po lesie }
       \line { Melodia radowała! }
     }
+    \null
   }
 }

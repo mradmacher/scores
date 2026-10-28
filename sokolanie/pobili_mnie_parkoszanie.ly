@@ -5,7 +5,6 @@
   <<
     \new Voice = "melody" {
       \relative c' {
-        \key d \major
         \time 2/4
         \autoBeamOff
 
