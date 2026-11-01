@@ -71,11 +71,12 @@
 
     \markup {
       \column {
-        \line { \bold "Szumiała leszczyna" }
-        \line { \bold "Hej na szutoskiem polu" }
-        \line { \bold "Pobiły mie Parkoszanie" }
-        \line { \bold "Leć głosie po rosie" }
-        \line { \bold "Szumi woda i wali" }
+        \line { Szumiała leszczyna }
+        \line { Hej na szutoskiem polu }
+        \line { Pobiły mie Parkoszanie }
+        \line { Leć głosie po rosie }
+        \line { Szumi woda i wali }
+        \line { Wyjechał leśniczy z rana }
       }
     }
 
@@ -92,6 +93,8 @@
     \include "lec_glosie_po_rosie.ly"
     \markup { \vspace #2 }
     \include "szumi_woda_i_wali.ly"
+    \markup { \vspace #2 }
+    \include "wyjechal_lesniczy.ly"
   }
 
 }
