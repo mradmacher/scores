@@ -79,6 +79,7 @@
         \line { Wyjechał leśniczy z rana }
         \line { Stoi Andzia w ogrodzie }
         \line { Tam na skraju tego gaju }
+        \line { Hej płynie potok szeroko }
       }
     }
 
@@ -101,6 +102,8 @@
     \include "stoi_andzia_w_ogrodzie.ly"
     \markup { \vspace #2 }
     \include "tam_na_skraju_tego_gaju.ly"
+    \markup { \vspace #2 }
+    \include "hej_plynie_potok_szeroko.ly"
   }
 
 }
