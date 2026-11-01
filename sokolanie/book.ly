@@ -80,6 +80,7 @@
         \line { Stoi Andzia w ogrodzie }
         \line { Tam na skraju tego gaju }
         \line { Hej płynie potok szeroko }
+        \line { Wieź mnie konisiu wieź }
       }
     }
 
@@ -104,6 +105,8 @@
     \include "tam_na_skraju_tego_gaju.ly"
     \markup { \vspace #2 }
     \include "hej_plynie_potok_szeroko.ly"
+    \markup { \vspace #2 }
+    \include "wiez_mnie_konisiu_wiez.ly"
   }
 
 }
