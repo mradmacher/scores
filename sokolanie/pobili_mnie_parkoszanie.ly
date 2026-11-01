@@ -3,7 +3,7 @@
     title = "Pobiły mie, Parkoszanie!"
   }
   <<
-    \new Voice = "melody" {
+    \new Voice = "melody" \transpose d f {
       \relative c' {
         \time 2/4
         \autoBeamOff
