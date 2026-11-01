@@ -77,6 +77,7 @@
         \line { Leć głosie po rosie }
         \line { Szumi woda i wali }
         \line { Wyjechał leśniczy z rana }
+        \line { Stoi Andzia w ogrodzie }
       }
     }
 
@@ -95,6 +96,8 @@
     \include "szumi_woda_i_wali.ly"
     \markup { \vspace #2 }
     \include "wyjechal_lesniczy.ly"
+    \markup { \vspace #2 }
+    \include "stoi_andzia_w_ogrodzie.ly"
   }
 
 }
