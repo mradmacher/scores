@@ -1,0 +1,112 @@
+\version "2.26.0"
+\include "deutsch.ly"
+
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 18
+  bottom-margin = 18
+  left-margin = 18
+  right-margin = 18
+  indent = 0
+  print-page-number = ##f
+  print-first-page-number = ##f
+  ragged-bottom = ##t
+  ragged-last-bottom = ##t
+  print-all-headers = ##t
+
+  oddHeaderMarkup = \markup {}
+  evenFooterMarkup = \markup {}
+
+  oddFooterMarkup = \markup {
+    \fill-line {
+      \unless \on-first-page \fromproperty #'page:page-number-string
+    }
+  }
+
+  evenFooterMarkup = \markup {
+    \fill-line {
+      \fromproperty #'page:page-number-string
+    }
+  }
+}
+
+\book {
+
+  % ==================== COVER PAGE ====================
+  \bookpart {
+    \header {
+    }
+
+    \markup {
+      \fill-line {
+        \null
+        \center-column {
+          \line { \fontsize #12 { \bold "Pieśni ludowe" } }
+          \vspace #2
+          \line {  \fontsize #12 { \bold "z Pilzna" } }
+          \vspace #2
+          \line { \fontsize #12 { \bold "i okolic" } }
+          \vspace #10
+          \line { \large "zebrali Małgorzata i Łukasz Chorążakowie" }
+          \vspace #20
+          \line { "Wszystkie prawa zastrzeżone" }
+          \line { "Listopad 2026" }
+        }
+        \null
+      }
+    }
+
+    % Force a page break after the cover
+    \pageBreak
+  }
+
+
+    % ==================== TABLE OF CONTENTS (Optional) ====================
+  \bookpart {
+    \header {
+      title = "Spis treści"
+      tagline = ##f
+    }
+
+    \markup {
+      \vspace #4
+      \column {
+        \line { Szumiała leszczyna }
+        \line { Hej na szutoskiem polu }
+        \line { Pobiły mie Parkoszanie }
+        \line { Leć głosie po rosie }
+        \line { Szumi woda i wali }
+        \line { Wyjechał leśniczy z rana }
+        \line { Stoi Andzia w ogrodzie }
+        \line { Tam na skraju tego gaju }
+        \line { Hej płynie potok szeroko }
+        \line { Wieź mnie konisiu wieź }
+      }
+    }
+
+    \pageBreak
+  }
+
+  \bookpart {
+    \include "szumiala_leszczyna.ly"
+    \markup { \vspace #3 }
+    \include "hej_na_szutoskiem_polu.ly"
+    \pageBreak
+    \include "pobili_mnie_parkoszanie.ly"
+    \markup { \vspace #3 }
+    \include "lec_glosie_po_rosie.ly"
+    \pageBreak
+    \include "szumi_woda_i_wali.ly"
+    \markup { \vspace #3 }
+    \include "wyjechal_lesniczy.ly"
+    \pageBreak
+    \include "stoi_andzia_w_ogrodzie.ly"
+    \markup { \vspace #3 }
+    \include "tam_na_skraju_tego_gaju.ly"
+    \pageBreak
+    \include "hej_plynie_potok_szeroko.ly"
+    \markup { \vspace #3 }
+    \include "wiez_mnie_konisiu_wiez.ly"
+  }
+
+}
