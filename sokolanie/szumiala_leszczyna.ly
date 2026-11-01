@@ -25,6 +25,7 @@
 }
 
 \markup {
+  \vspace #2
   \fill-line {
     \null
     \column {
@@ -41,7 +42,7 @@
       \line { z tureckiego pola. :| }
 
     }
-
+    \null
     \column {
       \line { Czerwone jabłuszko }
       \line { po stole sie toczy, }

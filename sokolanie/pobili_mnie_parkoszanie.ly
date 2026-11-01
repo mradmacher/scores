@@ -24,6 +24,7 @@
 }
 
 \markup {
+  \vspace #2
   \fill-line {
     \left-column {
       \line { Pobiły mie, Parkoszanie! }

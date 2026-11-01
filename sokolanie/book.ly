@@ -65,11 +65,11 @@
   \bookpart {
     \header {
       title = "Spis treści"
-      subtitle = ""
       tagline = ##f
     }
 
     \markup {
+      \vspace #4
       \column {
         \line { Szumiała leszczyna }
         \line { Hej na szutoskiem polu }
@@ -89,23 +89,23 @@
 
   \bookpart {
     \include "szumiala_leszczyna.ly"
-    \markup { \vspace #2 }
+    \markup { \vspace #3 }
     \include "hej_na_szutoskiem_polu.ly"
-    \markup { \vspace #2 }
+    \pageBreak
     \include "pobili_mnie_parkoszanie.ly"
-    \markup { \vspace #2 }
+    \markup { \vspace #3 }
     \include "lec_glosie_po_rosie.ly"
-    \markup { \vspace #2 }
+    \pageBreak
     \include "szumi_woda_i_wali.ly"
-    \markup { \vspace #2 }
+    \markup { \vspace #3 }
     \include "wyjechal_lesniczy.ly"
-    \markup { \vspace #2 }
+    \pageBreak
     \include "stoi_andzia_w_ogrodzie.ly"
-    \markup { \vspace #2 }
+    \markup { \vspace #3 }
     \include "tam_na_skraju_tego_gaju.ly"
-    \markup { \vspace #2 }
+    \pageBreak
     \include "hej_plynie_potok_szeroko.ly"
-    \markup { \vspace #2 }
+    \markup { \vspace #3 }
     \include "wiez_mnie_konisiu_wiez.ly"
   }
 

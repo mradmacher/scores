@@ -25,6 +25,7 @@
 }
 
 \markup {
+  \vspace #2
   \fill-line {
     \null
     \column {
@@ -47,7 +48,7 @@
       \line { |: ale jeszcze dalej }
       \line { jest kochanie moje. :| }
     }
-
+    \null
     \column {
       \line { Idź głosie po rosie }
       \line { prosto ku dworowi. }

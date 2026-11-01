@@ -28,6 +28,7 @@
 }
 
 \markup {
+  \vspace #2
   \fill-line {
     \null
     \column {
@@ -43,7 +44,7 @@
       \line { chodź sama, }
       \line { do stodoły do siana. :| }
     }
-
+    \null
     \column {
       \line { A co mamcia mi powie? }
       \line { |: A ty mamie tak powiedz, }

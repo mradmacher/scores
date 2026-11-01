@@ -24,6 +24,7 @@
 }
 
 \markup {
+  \vspace #2
   \fill-line {
     \null
     \column {
