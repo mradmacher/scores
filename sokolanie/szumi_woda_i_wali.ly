@@ -38,7 +38,7 @@
 
       \null
 
-      \line { Gdzie sie chłopcy kąpali. }
+      \line { Chodź dziewczyno chodź sama. }
       \line { |: Chodź dziewczyno chodź sama, }
       \line { chodź sama, }
       \line { do stodoły do siana. :| }
